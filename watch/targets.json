@@ -1,0 +1,62 @@
+{
+  "_comment": "절세계좌 감시 대상. 수치 패턴은 fee(0.0036396·0.15 형태 모두 포함). tier 1은 바뀌면 표 여러 줄이 함께 움직이는 곳.",
+  "pattern": "fee",
+  "targets": [
+    {
+      "id": "mirae_irp",
+      "label": "미래에셋 퇴직연금 운용/자산관리 수수료",
+      "tier": 1,
+      "url": "https://securities.miraeasset.com/hkp/hkp2007/n11.do",
+      "encoding": "euc-kr"
+    },
+    {
+      "id": "hana_irp",
+      "label": "하나증권 퇴직연금 운용·자산관리 수수료",
+      "tier": 1,
+      "url": "https://www.hanaw.com/main/pension/announce/announce/RP_060100_P.cmd"
+    },
+    {
+      "id": "namuh_fee",
+      "label": "NH나무 수수료 (ISA 우대율 포함)",
+      "tier": 1,
+      "url": "https://m.mynamuh.com/static/MTXSI0171"
+    },
+    {
+      "id": "samsung_fee",
+      "label": "삼성증권 업무·상품 수수료",
+      "tier": 1,
+      "url": "https://www.samsungpop.com/ux/kor/customer/guide/workproductguide/commission.do"
+    },
+    {
+      "id": "shinhan_fee",
+      "label": "신한투자증권 수수료 안내",
+      "tier": 2,
+      "url": "https://m.shinhansec.com/mweb/svif/feif/sfeif0001"
+    },
+    {
+      "id": "daishin_fee",
+      "label": "대신증권 온라인 수수료",
+      "tier": 2,
+      "url": "https://money2.daishin.com/E5/WTS/Customer/Guide/DM_Charge_Cyber.aspx"
+    },
+    {
+      "id": "kakaopay_fee",
+      "label": "카카오페이증권 수수료",
+      "tier": 2,
+      "url": "https://www.kakaopaysec.com/guide/feeGuide/dynamicPage.do"
+    },
+    {
+      "id": "kis_fee",
+      "label": "한국투자증권 위탁수수료",
+      "tier": 2,
+      "url": "https://securities.koreainvestment.com/main/customer/guide/_static/TF04ae010000.jsp"
+    }
+  ],
+  "_excluded": {
+    "shinhan_irp": "신한투자 퇴직연금 수수료 공시 — 수치를 JS로 주입해 서버 요청으로는 0개 수집됨",
+    "kiwoom": "키움 — WAF가 서버측 요청 차단",
+    "meritz": "메리츠 매매수수료 — 인증 요구로 비로그인 접근 불가",
+    "kb_irp": "KB 퇴직연금 수수료 — PDF 공시라 숫자 지문 방식 부적합",
+    "events": "이벤트 페이지 — 회차마다 URL이 바뀌어 감시 부적합. deadlines.json 으로 대체"
+  }
+}
