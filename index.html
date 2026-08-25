@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>증권사 절세계좌 수수료 비교표 · 똑재TV</title>
+<meta name="description" content="국내 13개 증권사의 중개형ISA·연금저축·IRP 수수료를 공식 공시 기준으로 한 표에 정리했습니다. IRP 운용관리·자산관리 수수료와 면제 조건, 계좌별 세제 한도까지 함께 확인하세요.">
+<link rel="canonical" href="https://ttokjaetv.github.io/tax-account-compare/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="똑재TV">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://ttokjaetv.github.io/tax-account-compare/">
+<meta property="og:title" content="증권사 절세계좌 수수료 비교표">
+<meta property="og:description" content="중개형ISA·연금저축·IRP 수수료를 13개 증권사 공식 공시에서 그대로 옮겨 정리했습니다.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F5EFE6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&apos;http://www.w3.org/2000/svg&apos; viewBox=&apos;0 0 32 32&apos;%3E%3Crect width=&apos;32&apos; height=&apos;32&apos; rx=&apos;7&apos; fill=&apos;%233A2F26&apos;/%3E%3Ctext x=&apos;16&apos; y=&apos;22&apos; font-size=&apos;17&apos; font-weight=&apos;900&apos; text-anchor=&apos;middle&apos; fill=&apos;%23FBF7F0&apos; font-family=&apos;sans-serif&apos;%3E%EB%98%91%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<style>
+  :root {
+    --bg: #F5EFE6; --bg-alt: #EFE7DA;
+    --ink: #1A1A1A; --ink-soft: #4A4A4A; --ink-mute: #8B8276;
+    --accent: #D9542B; --accent-soft: #F4D5C4;
+    --border: #E5DCC8; --white: #FBF7F0;
+    --brown: #8B6F47; --beige-gold: #C4A57B;
+    --dark-warm: #3A2F26; --dark-warm-soft: #5A4A3D; --green: #4A5A4A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--ink);
+    padding: 32px 24px; line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1280px; margin: 0 auto; }
+
+  header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 42px; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-icon {
+    width: 36px; height: 36px; background: var(--dark-warm); border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--white); font-weight: 900; font-size: 18px;
+  }
+  .logo-name { font-size: 16px; font-weight: 900; letter-spacing: -0.3px; }
+  .logo-sub { font-size: 10px; color: var(--ink-mute); font-weight: 700; letter-spacing: 1px; }
+
+  .hero { text-align: center; margin-bottom: 30px; }
+  .tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--white); border: 1.5px solid var(--accent); color: var(--accent);
+    padding: 6px 14px; border-radius: 999px;
+    font-size: 12px; font-weight: 700; margin-bottom: 22px;
+  }
+  .tag .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+  .hero-title { font-size: 54px; font-weight: 900; letter-spacing: -2.3px; line-height: 1.07; margin-bottom: 20px; }
+  .underline-mark { background: linear-gradient(transparent 60%, var(--accent-soft) 60%); padding: 0 4px; }
+  .hero-desc { font-size: 16px; color: var(--ink-soft); line-height: 1.7; font-weight: 500; max-width: 680px; margin: 0 auto; }
+  .asof-badge {
+    display: inline-block; margin-top: 18px;
+    background: var(--bg-alt); border: 1px solid var(--border);
+    border-radius: 999px; padding: 7px 16px;
+    font-size: 12px; font-weight: 700; color: var(--ink-mute);
+  }
+  .asof-badge strong { color: var(--accent); font-weight: 800; }
+
+  /* 범위 안내 박스 */
+  .scope-box {
+    background: var(--white); border: 2px solid var(--accent);
+    border-radius: 18px; padding: 24px 26px; margin-bottom: 26px;
+  }
+  .scope-title { font-size: 17px; font-weight: 900; letter-spacing: -0.4px; margin-bottom: 18px; }
+  .scope-title .hl { background: linear-gradient(transparent 58%, var(--accent-soft) 58%); padding: 0 3px; }
+  .scope-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .scope-item { border-radius: 12px; padding: 16px 18px; }
+  .scope-item.ok { background: var(--bg-alt); border: 1px solid var(--border); }
+  .scope-item.no { background: var(--accent-soft); border: 1px solid rgba(217,84,43,0.3); }
+  .scope-k { font-size: 12px; font-weight: 800; letter-spacing: 0.3px; margin-bottom: 7px; }
+  .scope-item.ok .scope-k { color: var(--ink-mute); }
+  .scope-item.no .scope-k { color: #9C3A17; }
+  .scope-v { font-size: 13px; font-weight: 600; color: var(--ink-soft); line-height: 1.7; }
+  .scope-v b { color: var(--ink); font-weight: 800; }
+  .scope-foot {
+    margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--border);
+    font-size: 12.5px; font-weight: 600; color: var(--ink-mute); line-height: 1.75;
+  }
+  .scope-foot b { color: var(--ink-soft); font-weight: 800; }
+
+  .scope-note {
+    max-width: 640px; margin: 12px auto 0;
+    font-size: 12.5px; color: var(--ink-mute); font-weight: 600; line-height: 1.65;
+  }
+  .scope-note b { color: var(--ink-soft); font-weight: 800; }
+
+  .top-cta {
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: 16px;
+    padding: 18px 24px; margin-bottom: 26px;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .top-cta-text { font-size: 14px; color: var(--ink-soft); font-weight: 600; }
+  .top-cta-text strong { color: var(--ink); font-weight: 800; }
+  .top-cta-links { display: flex; gap: 10px; flex-wrap: wrap; }
+  .top-cta-link {
+    display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 8px;
+    font-size: 13px; font-weight: 700; text-decoration: none; transition: all 0.15s ease;
+    background: var(--white); border: 1.5px solid var(--border); color: var(--ink);
+  }
+  .top-cta-link:hover { border-color: var(--accent); color: var(--accent); }
+  .top-cta-link.primary { background: var(--accent); color: var(--white); border-color: var(--accent); }
+  .top-cta-link.primary:hover { background: #E66740; border-color: #E66740; }
+  .naver-mark {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 16px; height: 16px; background: #03C75A; color: #FFF;
+    font-weight: 900; font-size: 11px; border-radius: 3px; line-height: 1; flex-shrink: 0;
+  }
+
+  .toc {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 26px; align-items: center;
+    position: sticky; top: 0; z-index: 20;
+    background: var(--bg); padding: 12px 0; border-bottom: 1px solid var(--border);
+  }
+  .toc a {
+    text-decoration: none; background: var(--white); border: 1.5px solid var(--border);
+    color: var(--ink-soft); font-size: 13px; font-weight: 700;
+    padding: 9px 15px; border-radius: 10px; transition: all 0.15s ease; white-space: nowrap;
+  }
+  .toc a:hover { border-color: var(--accent); color: var(--accent); }
+  .toc-search {
+    flex: 1; min-width: 200px;
+    border: 1.5px solid var(--border); border-radius: 10px;
+    padding: 9px 14px; font-family: inherit; font-size: 13px; font-weight: 700;
+    background: var(--white); color: var(--ink);
+  }
+  .toc-search:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+  .card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 26px; margin-bottom: 26px; }
+  .sec-head { margin-bottom: 18px; }
+  .sec-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 8px; }
+  .sec-title { font-size: 21px; font-weight: 900; letter-spacing: -0.6px; margin-bottom: 8px; }
+  .sec-desc { font-size: 13.5px; color: var(--ink-mute); font-weight: 600; line-height: 1.7; }
+  .sec-desc strong { color: var(--accent); font-weight: 800; }
+
+  .table-wrap { overflow-x: auto; border-radius: 12px; -webkit-overflow-scrolling: touch; }
+  table.t { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.t th {
+    background: var(--bg-alt); padding: 11px 10px; text-align: center;
+    font-weight: 800; color: var(--ink-soft); font-size: 11px;
+    border-bottom: 1.5px solid var(--border); white-space: nowrap; vertical-align: middle;
+  }
+  table.t th.l, table.t td.l { text-align: left; }
+  table.t th.r, table.t td.r { text-align: right; }
+  table.t td {
+    padding: 13px 10px; text-align: center; border-bottom: 1px solid var(--border);
+    font-weight: 600; color: var(--ink); vertical-align: middle;
+  }
+  table.t td.nw { white-space: nowrap; }
+  table.t tbody tr:hover { background: var(--bg-alt); }
+  table.t tbody tr:last-child td { border-bottom: none; }
+  table.t tbody tr.hi { background: var(--accent-soft); }
+
+  /* 대상 조건 강조 (생애최초·휴면 등) */
+  .tgt { color: #C0392B; font-weight: 800; }
+  .tgt-ok { color: #2D7A4F; font-weight: 800; }
+
+  /* 증권사 칸 안의 규모 표기 */
+  .bsize {
+    font-size: 10.5px; font-weight: 700; color: var(--ink-mute);
+    margin-top: 5px; padding-top: 5px;
+    border-top: 1px dashed var(--border);
+    letter-spacing: -0.1px; line-height: 1.5;
+  }
+  .bsize-rank { color: var(--brown); font-weight: 800; font-size: 11px; }
+  .bsize-rank b { color: var(--brown); font-weight: 900; }
+  .bsize-amt { margin-top: 2px; }
+  tr.hi .bsize { border-top-color: rgba(217,84,43,0.3); }
+
+  /* 증권사 헤더 안의 정렬 버튼 */
+  .sort-mini { display: flex; gap: 4px; margin-top: 6px; }
+  .sort-mini button {
+    font-family: inherit; font-size: 10px; font-weight: 800;
+    padding: 3px 7px; border-radius: 6px; cursor: pointer;
+    background: var(--white); border: 1px solid var(--border);
+    color: var(--ink-mute); transition: all 0.12s ease;
+    display: inline-flex; align-items: center; gap: 3px; white-space: nowrap;
+  }
+  .sort-mini button:hover { border-color: var(--accent); color: var(--accent); }
+  .sort-mini button.on { background: var(--dark-warm); border-color: var(--dark-warm); color: var(--white); }
+  .sort-mini .arrow { font-size: 8px; opacity: 0.5; letter-spacing: -1px; }
+  .sort-mini button.on .arrow { opacity: 1; }
+
+  /* 정렬 가능한 헤더 */
+  th.sortable { cursor: pointer; user-select: none; transition: all 0.12s ease; position: relative; }
+  th.sortable:hover { background: var(--accent-soft) !important; color: #9C3A17 !important; }
+  th.sortable .arrow { display: inline-block; margin-left: 4px; font-size: 9px; opacity: 0.35; letter-spacing: -1px; }
+  th.sortable.on { background: var(--dark-warm) !important; color: var(--white) !important; }
+  th.sortable.on .arrow { opacity: 1; }
+  .sort-hint {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: 8px;
+    padding: 5px 11px; font-size: 11.5px; font-weight: 700; color: var(--ink-mute);
+    margin-top: 10px;
+  }
+
+  /* 종합표 전용 */
+  table.master th.g-dom { background: var(--accent-soft); color: #9C3A17; }
+  table.master th.g-ovs { background: #E8DFC9; color: var(--brown); }
+  table.master th.g-evt { background: #DCE4DC; color: var(--green); }
+  table.master td.c-dom { background: rgba(244,213,196,0.22); }
+  table.master td.c-evt { background: rgba(220,228,220,0.3); text-align: left; }
+  table.master tbody tr.hi td.c-dom { background: rgba(244,213,196,0.55); }
+  table.master tbody tr.hi td.c-evt { background: rgba(220,228,220,0.5); }
+
+  .bname { font-weight: 900; font-size: 14px; letter-spacing: -0.3px; }
+  .bsub { font-size: 11px; color: var(--ink-mute); font-weight: 700; margin-top: 3px; line-height: 1.45; }
+  .big { font-size: 15px; font-weight: 900; letter-spacing: -0.4px; }
+  .big.a { color: var(--accent); }
+  .big.b { color: var(--brown); }
+  .big.g { color: var(--green); }
+  .mute { color: var(--ink-mute); font-weight: 600; }
+  .rank { font-weight: 900; color: var(--ink-mute); width: 34px; }
+  tr.hi .rank { color: var(--accent); }
+  .split { font-size: 12.5px; font-weight: 800; line-height: 1.6; }
+  .split .k { color: var(--ink-mute); font-weight: 700; font-size: 11px; }
+
+  .chip { display: inline-block; font-size: 10px; font-weight: 800; padding: 2px 7px; border-radius: 5px; white-space: nowrap; }
+  .chip-warn { background: #E8DFC9; color: var(--brown); }
+  .chip-sep { background: #DCE4DC; color: var(--green); }
+  .chip-inc { background: #E4E0D6; color: var(--ink-mute); }
+  .chip-auto { background: var(--accent); color: var(--white); }
+  .chip-apply { background: var(--dark-warm); color: var(--white); }
+  .chip-check { background: var(--brown); color: var(--white); }
+  .chip-none { background: #D8D0C0; color: var(--dark-warm-soft); }
+  .chip-tier { background: var(--dark-warm-soft); color: var(--white); }
+
+  .evt-line { font-size: 12.5px; font-weight: 800; line-height: 1.5; margin-top: 5px; }
+  .evt-period { font-size: 11px; color: var(--ink-mute); font-weight: 700; margin-top: 4px; }
+
+
+  /* 조건 리스트 */
+  .cond-list { margin-top: 6px; display: flex; flex-direction: column; gap: 3px; }
+  .cond-row {
+    display: flex; justify-content: space-between; align-items: center; gap: 10px;
+    background: var(--bg-alt); border-radius: 5px; padding: 3px 7px;
+  }
+  .cond-k { font-size: 10.5px; color: var(--ink-mute); font-weight: 700; }
+  .cond-v { font-size: 11px; color: var(--ink); font-weight: 800; }
+
+  /* 수수료 밑 조건부 제도 안내 */
+  .perk-tip { margin-top: 6px; }
+  .perk-tip a {
+    display: inline-block; text-decoration: none;
+    font-size: 10.5px; font-weight: 800; color: var(--accent);
+    background: var(--white); border: 1px dashed var(--accent);
+    border-radius: 6px; padding: 3px 7px; line-height: 1.5;
+  }
+  .perk-tip a:hover { background: var(--accent-soft); }
+
+  /* 이벤트 조건 한 줄 */
+  .evt-cap {
+    font-size: 11px; color: var(--ink-soft); font-weight: 700;
+    margin-top: 4px; line-height: 1.5; white-space: normal;
+  }
+
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 16px;
+    padding-top: 14px; border-top: 1px dashed var(--border);
+    font-size: 12px; color: var(--ink-mute); font-weight: 600;
+  }
+  .legend span.li { display: inline-flex; align-items: center; gap: 6px; }
+
+  /* 확인 링크 */
+  .lnk-wrap { display: flex; flex-direction: column; gap: 7px; padding: 2px 0; }
+  .lnk {
+    display: flex; flex-direction: column; gap: 2px; text-decoration: none;
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: 9px;
+    padding: 8px 12px; transition: all 0.15s ease; max-width: 620px;
+  }
+  .lnk:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .lnk-t { font-size: 12.5px; font-weight: 800; color: var(--ink); letter-spacing: -0.2px; }
+  .lnk:hover .lnk-t { color: #9C3A17; }
+  .lnk-u {
+    font-size: 11px; font-weight: 600; color: var(--ink-mute);
+    word-break: break-all; line-height: 1.45;
+  }
+
+  /* 비고 카드 (종합표 하단) */
+  #notes-master { margin-top: 4px; }
+  .note-card {
+    display: grid; grid-template-columns: 130px 1fr; gap: 18px;
+    padding: 18px 0; border-bottom: 1px solid var(--border);
+  }
+  .note-card:last-child { border-bottom: none; padding-bottom: 4px; }
+  .note-card:first-child { padding-top: 6px; }
+  .note-name {
+    font-size: 14px; font-weight: 900; color: var(--accent);
+    letter-spacing: -0.3px; line-height: 1.5;
+  }
+  .note-body { min-width: 0; }
+  .note-row {
+    display: grid; grid-template-columns: 96px 1fr; gap: 14px;
+    align-items: start; padding: 7px 0;
+  }
+  .note-row + .note-row { border-top: 1px dashed var(--border); }
+  .note-k {
+    font-size: 11px; font-weight: 800; color: var(--ink-mute);
+    background: var(--bg-alt); border-radius: 6px;
+    padding: 3px 8px; text-align: center; white-space: nowrap;
+    letter-spacing: -0.2px;
+  }
+  .note-row.warn .note-k { background: #E8DFC9; color: var(--brown); }
+  .note-v {
+    font-size: 13.5px; font-weight: 600; color: var(--ink-soft);
+    line-height: 1.85; letter-spacing: -0.1px; min-width: 0;
+  }
+  .note-v b { color: var(--ink); font-weight: 800; }
+  .note-row.warn .note-v { color: var(--brown); }
+
+  .notes { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--border); }
+  .note-item { display: flex; gap: 10px; font-size: 12.5px; color: var(--ink-soft); font-weight: 600; line-height: 1.65; margin-bottom: 7px; }
+  .note-item .nm { color: var(--accent); font-weight: 800; flex-shrink: 0; min-width: 116px; }
+
+  .calc-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--ink-mute); text-transform: uppercase; margin-bottom: 6px; display: block; }
+  input[type=number] {
+    background: var(--white); border: 1.5px solid var(--border); border-radius: 10px;
+    padding: 10px 14px; font-family: inherit; font-size: 15px; color: var(--ink); font-weight: 700; width: 100%;
+  }
+  input[type=number]:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .input-hint { font-size: 12px; color: var(--ink-mute); margin-top: 6px; font-weight: 600; }
+  .segment { display: inline-flex; background: var(--bg-alt); border: 1.5px solid var(--border); border-radius: 12px; padding: 4px; gap: 4px; width: 100%; }
+  .segment button {
+    flex: 1; border: none; background: transparent; font-family: inherit;
+    font-size: 13px; font-weight: 800; color: var(--ink-mute);
+    padding: 9px 10px; border-radius: 9px; cursor: pointer; transition: all 0.15s ease;
+  }
+  .segment button.active { background: var(--accent); color: var(--white); }
+
+  .insight-box { background: var(--dark-warm); color: var(--white); border-radius: 20px; padding: 34px; margin-bottom: 24px; }
+  .insight-label { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+  .insight-label-text { font-size: 12px; font-weight: 800; letter-spacing: 1.5px; color: var(--accent-soft); }
+  .insight-title { font-size: 23px; font-weight: 900; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.3; }
+  .insight-desc { font-size: 14.5px; line-height: 1.75; color: #D9D2C5; font-weight: 500; }
+  .insight-desc strong { color: var(--white); font-weight: 800; }
+  .insight-desc + .insight-desc { margin-top: 13px; }
+  .insight-cta { margin-top: 26px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .insight-cta-text { font-size: 14px; color: #D9D2C5; font-weight: 600; margin-right: 8px; }
+  .cta-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 10px; font-size: 13px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; }
+  .cta-link.primary { background: var(--accent); color: var(--white); }
+  .cta-link.primary:hover { background: #E66740; transform: translateY(-1px); }
+  .cta-link.secondary { background: rgba(255,255,255,0.08); color: var(--white); border: 1px solid rgba(255,255,255,0.15); }
+  .cta-link.secondary:hover { background: rgba(255,255,255,0.15); transform: translateY(-1px); }
+
+  .source-box { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 16px; padding: 22px 24px; margin-bottom: 24px; }
+  .source-title { font-size: 13px; font-weight: 800; margin-bottom: 10px; }
+  .source-text { font-size: 12px; color: var(--ink-mute); font-weight: 600; line-height: 1.8; }
+
+  footer { text-align: center; padding: 36px 0 20px; color: var(--ink-mute); font-size: 12px; font-weight: 600; line-height: 1.8; }
+  .hidden-row { display: none !important; }
+
+  @media (max-width: 768px) {
+    body { padding: 16px 12px; }
+    header { margin-bottom: 24px; }
+    .hero { margin-bottom: 22px; }
+    .hero-title { font-size: 29px !important; letter-spacing: -1.1px !important; line-height: 1.18 !important; }
+    .hero-desc { font-size: 14px; }
+    .hero-desc br { display: none; }
+    .tag { font-size: 11px; padding: 5px 12px; margin-bottom: 18px; }
+    .top-cta { flex-direction: column; align-items: stretch; padding: 16px; margin-bottom: 20px; }
+    .top-cta-text { font-size: 13px; line-height: 1.55; }
+    .top-cta-links { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .top-cta-link { justify-content: center; font-size: 12px; padding: 10px 8px; }
+    .scope-box { padding: 18px 16px; border-radius: 14px; margin-bottom: 20px; }
+    .scope-title { font-size: 14.5px; line-height: 1.45; margin-bottom: 14px; }
+    .scope-grid { grid-template-columns: 1fr !important; gap: 10px; }
+    .scope-item { padding: 14px; }
+    .scope-v { font-size: 12.5px; line-height: 1.65; }
+    .scope-foot { font-size: 12px; line-height: 1.7; }
+    .toc { padding: 10px 0; gap: 6px; }
+    .toc a { font-size: 12px; padding: 8px 11px; }
+    .toc-search { min-width: 100%; order: -1; }
+    .card { padding: 16px 14px !important; margin-bottom: 18px !important; border-radius: 16px !important; }
+    .sec-title { font-size: 17px; }
+    .sec-desc { font-size: 12.5px; line-height: 1.65; }
+    .table-wrap { margin: 0 -14px; padding: 0 14px; }
+    table.t { font-size: 11.5px; }
+    table.t th { padding: 8px 6px; font-size: 10px; }
+    table.t td { padding: 10px 6px; }
+    .bname { font-size: 12.5px; }
+    .bsize { font-size: 9.5px; margin-top: 4px; padding-top: 4px; }
+    .sort-mini button { font-size: 9px; padding: 2px 5px; }
+    .bsub { font-size: 10px; }
+    .big { font-size: 13px; }
+    .split { font-size: 11.5px; }
+    .calc-grid { grid-template-columns: 1fr !important; gap: 14px !important; }
+    .note-card { grid-template-columns: 1fr !important; gap: 8px; padding: 14px 0; }
+    .note-name { font-size: 13.5px; }
+    .note-row { grid-template-columns: 1fr !important; gap: 5px; padding: 8px 0; }
+    .note-k { justify-self: start; }
+    .note-v { font-size: 13px; line-height: 1.8; }
+    .note-item { flex-direction: column; gap: 1px; }
+    .note-item .nm { min-width: 0; }
+    .insight-box { padding: 22px 17px; border-radius: 16px; }
+    .insight-title { font-size: 17px !important; line-height: 1.38; }
+    .insight-desc { font-size: 13px; line-height: 1.7; }
+    .insight-cta { flex-direction: column; align-items: stretch; padding-top: 18px; margin-top: 20px; gap: 10px; }
+    .insight-cta-text { font-size: 13px; margin-right: 0; }
+    .cta-link { justify-content: center; }
+    footer { padding: 24px 0 16px; font-size: 11px; }
+  }
+  @media (max-width: 380px) {
+    .hero-title { font-size: 25px !important; }
+    .top-cta-links { grid-template-columns: 1fr !important; }
+  }
+</style>
+<body>
+<style>
+  /* 절세계좌표 추가 스타일 */
+  /* 계좌 종류별 색 구분 — 머리글뿐 아니라 열 전체와 숫자 색까지 나눈다 */
+  table.master th.g-grp { background: #E4DCCB; color: var(--dark-warm-soft); }
+  table.master th.g-isa { background: #F4D5C4; color: #9C3A17; }
+  table.master th.g-pen { background: #E6D5B4; color: #7A5A28; }
+  table.master th.g-irp { background: #D3DFD3; color: #37502F; }
+  td.c-isa { background: rgba(244,213,196,0.42); }
+  td.c-pen { background: rgba(230,213,180,0.46); }
+  td.c-irp { background: rgba(211,223,211,0.46); }
+  /* 상세표에서도 실부담 열을 같은 색으로 */
+  #t-isa th:nth-child(5) { background: #F4D5C4; color: #9C3A17; }
+  #t-pen th:nth-child(5) { background: #E6D5B4; color: #7A5A28; }
+  #t-isa tbody tr:hover td.c-isa { background: rgba(244,213,196,0.68); }
+  #t-pen tbody tr:hover td.c-pen { background: rgba(230,213,180,0.72); }
+  table.master tbody tr:hover td.c-isa { background: rgba(244,213,196,0.68); }
+  table.master tbody tr:hover td.c-pen { background: rgba(230,213,180,0.72); }
+  table.master tbody tr:hover td.c-irp { background: rgba(211,223,211,0.72); }
+  /* 계좌 그룹이 바뀌는 지점에 세로 구분선 */
+  table.master .bl { border-left: 2px solid #D5C9AF; }
+  /* 큰 숫자도 계좌별로 색을 달리한다 */
+  .big.a { color: var(--accent); }   /* 중개형ISA */
+  .big.b { color: #8A6420; }         /* 연금저축 */
+  .big.g { color: #3E5A38; }         /* IRP */
+  /* 증권사명·규모는 줄바꿈 금지 — 열이 좁아지면 표가 가로 스크롤되게 둔다 */
+  .bname { white-space: nowrap; }
+  .bsize, .bsize-rank, .bsize-amt { white-space: nowrap; }
+  table.t td.l, table.t th.l { word-break: keep-all; }
+  .sub2 { font-size: 10.5px; color: var(--ink-mute); font-weight: 700; margin-top: 4px; line-height: 1.5; }
+  .cond2 { font-size: 11px; color: var(--ink-soft); font-weight: 700; margin-top: 5px; line-height: 1.55; white-space: normal; }
+  /* 종합표 면제 조건 열 — 폭이 과하게 벌어지지 않게 묶어둔다 */
+  table.master th:last-child, table.master td:last-child { width: 180px; }
+  table.master td:last-child .cond2 { font-size: 10.5px; line-height: 1.5; margin-top: 4px; }
+  .na { color: var(--ink-mute); font-weight: 800; font-size: 13px; }
+  .tax-k { font-weight: 800; color: var(--ink); }
+  .tax-warn { background: #F9E2D5; border: 1px solid rgba(217,84,43,0.35); border-radius: 12px; padding: 16px 18px; margin-top: 16px; }
+  .tax-warn-t { font-size: 13.5px; font-weight: 900; color: #9C3A17; margin-bottom: 8px; }
+  .tax-warn-v { font-size: 13px; font-weight: 600; color: var(--ink-soft); line-height: 1.8; }
+  .tax-warn-v b { color: var(--ink); font-weight: 800; }
+  /* 목차 — 검색창을 윗줄로 빼고 링크는 성격별로 묶는다 */
+  .toc { display: flex; flex-direction: column; align-items: stretch; gap: 10px; }
+  .toc-search { width: 100%; min-width: 0; flex: none; }
+  .toc-links { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+  .toc-div { width: 1px; height: 15px; background: var(--border); margin: 0 4px; flex-shrink: 0; }
+  .toc-links a { padding: 8px 13px; font-size: 12.5px; }
+  .toc-links a.k-main { background: var(--dark-warm); border-color: var(--dark-warm); color: var(--white); }
+  .toc-links a.k-main:hover { background: var(--dark-warm-soft); border-color: var(--dark-warm-soft); color: var(--white); }
+  /* 계좌 3종은 표의 열 색과 같은 점을 달아 둔다 */
+  .toc-links a.k-isa::before, .toc-links a.k-pen::before, .toc-links a.k-irp::before {
+    content: ''; display: inline-block; width: 6px; height: 6px;
+    border-radius: 50%; margin-right: 6px; vertical-align: 1px;
+  }
+  .toc-links a.k-isa::before { background: #D9542B; }
+  .toc-links a.k-pen::before { background: #8A6420; }
+  .toc-links a.k-irp::before { background: #3E5A38; }
+  @media (max-width: 768px) {
+    .toc-div { display: none; }
+    .toc-links { gap: 6px; }
+    .toc-links a { padding: 7px 11px; font-size: 12px; }
+  }
+
+  /* 신청해야만 받는 요율 — 놓치면 표준 요율이 나가므로 눈에 띄게 */
+  .chip-must { background: #C0392B; color: var(--white); }
+  .must-note { font-size: 10.5px; font-weight: 800; color: #C0392B; margin-top: 3px; line-height: 1.45; }
+
+  .ask-q {
+    background: var(--bg-alt); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+    border-radius: 8px; padding: 10px 13px;
+    font-size: 13px; font-weight: 600; color: var(--ink); line-height: 1.7;
+  }
+  .ask-common {
+    background: var(--white); border: 2px solid var(--accent); border-radius: 12px;
+    padding: 16px 18px; margin-top: 16px;
+  }
+  .ask-common-k { font-size: 12px; font-weight: 900; color: var(--accent); margin-bottom: 8px; letter-spacing: -0.2px; }
+  .ask-common-v { font-size: 13.5px; font-weight: 700; color: var(--ink); line-height: 1.75; }
+</style>
+<div class="container">
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon">똑</div>
+      <div>
+        <div class="logo-name">똑재TV</div>
+        <div class="logo-sub">TAX-SAVING ACCOUNT TABLE</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <span class="tag"><span class="dot"></span>증권사 절세계좌 비교표</span>
+    <h1 class="hero-title">
+      ISA · 연금저축 · IRP,<br>
+      <span class="underline-mark">수수료는 계좌마다</span> 다릅니다
+    </h1>
+    <p class="hero-desc">
+      절세계좌는 일반 위탁계좌와 요율 체계가 아예 다릅니다.<br>
+      국내 13개 증권사의 중개형ISA · 연금저축 · IRP 수수료를 각 사 공식 공시에서 그대로 옮겨 정리했습니다.<br>
+      IRP는 매매수수료보다 <b>운용관리 · 자산관리 수수료</b>가 진짜 비용이라, 표를 따로 뒀습니다.
+    </p>
+    <div class="asof-badge">데이터 확인일 <strong>2026년 8월 20일</strong> · <strong>비대면 신규 개설</strong> · 온라인 주문 기준</div>
+    <div class="scope-note">※ <b>지금 계좌를 새로 여는 경우</b>를 기준으로 정리했습니다. 일반 위탁계좌 수수료는 별도 표에서 다룹니다.</div>
+  </div>
+
+  <div class="top-cta">
+    <div class="top-cta-text">
+      💡 <strong>절세계좌는 수수료보다 세제 한도가 먼저</strong>입니다. ETF·연금 이야기는 똑재TV에서 매주 만나보세요.
+    </div>
+    <div class="top-cta-links">
+      <a href="https://www.youtube.com/@ttok_jae" target="_blank" rel="noopener" class="top-cta-link primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        똑재TV 구독하기
+      </a>
+      <a href="https://cafe.naver.com/ttokjae" target="_blank" rel="noopener" class="top-cta-link">
+        <span class="naver-mark">N</span>
+        평생 ETF 투자 카페
+      </a>
+    </div>
+  </div>
+
+  <!-- 이 표의 범위 -->
+  <div class="scope-box">
+    <div class="scope-title">📌 이 표는 <span class="hl">지금 절세계좌를 새로 여는 분</span> 기준입니다</div>
+    <div class="scope-grid">
+      <div class="scope-item ok">
+        <div class="scope-k">이 표로 알 수 있는 것</div>
+        <div class="scope-v">
+          지금 비대면으로 <b>중개형ISA · 연금저축계좌 · IRP</b>를 새로 열었을 때 적용되는 매매수수료와 관리수수료입니다.
+          어느 증권사에서 절세계좌를 열지 비교하는 용도입니다.
+        </div>
+      </div>
+      <div class="scope-item no">
+        <div class="scope-k">이 표로 알 수 없는 것</div>
+        <div class="scope-v">
+          <b>이미 갖고 계신 절세계좌의 실제 수수료</b>입니다. 개설 시점의 이벤트 회차, 계좌관리점(영업점/다이렉트), 신청 여부에 따라 <b>같은 증권사여도 요율이 전혀 다릅니다.</b>
+          <b>수익률과 상품 라인업도 다루지 않습니다.</b>
+        </div>
+      </div>
+    </div>
+    <div class="scope-foot">
+      절세계좌 우대 요율은 대부분 <b>「올해 개설분 한정」 이벤트</b> 형태입니다.
+      미래에셋 다이렉트 ISA, 삼성 「평생혜택」처럼 <b>평생 적용되지만 가입 기간이 정해진</b> 제도가 많아, 개설 시점이 요율을 결정합니다.
+      반대로 계좌관리점을 영업점으로 바꾸면 <b>우대가 즉시 사라지는</b> 경우도 있습니다.
+    </div>
+  </div>
+
+  <div class="toc">
+    <input type="text" id="search" class="toc-search" placeholder="🔍 증권사 이름으로 찾기 (예: 키움)">
+    <nav class="toc-links">
+      <a href="#t-master" class="k-main">종합 비교표</a>
+      <span class="toc-div"></span>
+      <a href="#t-isa" class="k-isa">중개형ISA</a>
+      <a href="#t-pen" class="k-pen">연금저축</a>
+      <a href="#t-irp" class="k-irp">IRP 수수료</a>
+      <span class="toc-div"></span>
+      <a href="#t-evfee">수수료 우대</a>
+      <a href="#t-evreward">리워드</a>
+      <span class="toc-div"></span>
+      <a href="#t-calc">계산기</a>
+      <a href="#t-tax">세제</a>
+      <a href="#t-prod">투자 상품</a>
+      <span class="toc-div"></span>
+      <a href="#t-link">확인 링크</a>
+      <a href="#t-ask">문의</a>
+    </nav>
+  </div>
+
+  <!-- 종합 비교표 -->
+  <div class="card" id="t-master">
+    <div class="sec-head">
+      <div class="sec-eyebrow">TABLE 01 · 메인</div>
+      <div class="sec-title">증권사별 절세계좌 종합 비교표</div>
+      <div class="sec-desc">
+        지금 새로 개설하는 <strong>비대면 절세계좌 · 온라인 주문</strong> 기준입니다.<br>
+        중개형ISA와 연금저축은 매매수수료(실부담)를, IRP는 연 관리수수료를 나란히 놓았습니다.<br>
+        IRP는 비대면으로 열면 <strong>9곳 모두 0%</strong>라, 큰 숫자를 0%로 두고 작은 글씨에 조건이 깨졌을 때의 표준 요율을 적었습니다.<br>
+        기본 정렬은 회사 규모 순이며, 머리글을 누르면 수수료 순으로 바뀝니다.
+      </div>
+      <div class="sort-hint">↕ 회색 표 머리글을 누르면 오름차순 ↔ 내림차순으로 정렬됩니다</div>
+    </div>
+    <div class="table-wrap">
+      <table class="t master">
+        <thead>
+          <tr>
+            <th rowspan="2">순위</th>
+            <th rowspan="2" class="l">증권사
+              <div class="sort-mini">
+                <button type="button" data-key="size" class="on">규모순<span class="arrow">▲</span></button>
+                <button type="button" data-key="name">가나다<span class="arrow">▲▼</span></button>
+              </div>
+            </th>
+            <th colspan="2" class="g-grp bl">매매수수료 (온라인 · 실부담)</th>
+            <th colspan="2" class="g-irp bl">IRP (개인형퇴직연금)</th>
+          </tr>
+          <tr>
+            <th class="g-isa sortable bl" data-key="isa">중개형ISA<span class="arrow">▲▼</span></th>
+            <th class="g-pen sortable" data-key="pen">연금저축<span class="arrow">▲▼</span></th>
+            <th class="g-irp sortable bl" data-key="irp">연 관리수수료<span class="arrow">▲▼</span></th>
+            <th class="g-irp">면제 조건</th>
+          </tr>
+        </thead>
+        <tbody id="tb-master"></tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span class="li"><span class="chip chip-inc">포함</span> 유관기관제비용이 표기 요율에 포함</span>
+      <span class="li"><span class="chip chip-sep">별도</span> 유관기관제비용을 따로 더 받음</span>
+      <span class="li"><span class="chip chip-warn">확인필요</span> 공식 페이지에서 확인하지 못함</span>
+      <span class="li"><span class="chip chip-tier">구간별</span> 거래금액에 따라 요율이 달라짐</span>
+      <span class="li"><span class="chip chip-none">미취급</span> 해당 계좌를 취급하지 않음</span>
+      <span class="li"><span class="chip chip-auto">자동</span> 계좌 개설만 하면 적용</span>
+      <span class="li"><span class="chip chip-must">신청 필수</span> 신청 안 하면 표준 요율이 나감</span>
+    </div>
+    <div class="notes">
+      <div class="note-item"><span class="nm">신청 필수 2건</span><span>표의 숫자를 그대로 받으려면 <b>신청 버튼을 눌러야</b> 하는 곳이 있습니다.<br>· <b>신한투자증권 ISA</b> — 「2026년 국내주식 수수료 이벤트」를 신청해야 0.0036396%입니다. 안 하면 <b>MTS 0.189%</b>가 그대로 나가고, 고지문에 "<b>신청 시점 이후</b> 신규 주문하여 체결된 거래부터 적용"이라 적혀 있어 <b>이미 한 거래는 소급되지 않습니다.</b><br>· <b>키움증권 연금저축</b> — ETF 수수료 면제 이벤트는 <b>2026년 9월 30일이 신청 마감</b>입니다. 신청하면 그날부터 1년간 적용됩니다.<br>나머지는 계좌 개설만 하면 자동 적용됩니다. 자세한 조건은 TABLE 05를 보세요.</span></div>
+      <div class="note-item"><span class="nm">유관기관제비용</span><span>한국거래소·예탁결제원 등에 나가는 원가로 주식 <b>0.0036396%</b>, ETF·ETN <b>0.0042087%</b>입니다. 증권사가 수수료를 "0원"으로 깎아도 이 비용은 남습니다. 표의 실부담 값은 이 비용을 더한 뒤의 숫자입니다.</span></div>
+      <div class="note-item"><span class="nm">IRP 관리수수료 0%</span><span>각 사 <b>퇴직연금 수수료 공시</b> 기준으로, <b>IRP를 취급하는 9곳 전부 비대면·온라인으로 개설하면 관리수수료가 0%</b>입니다. 그래서 큰 숫자를 0%로 두고, 작은 글씨에 조건이 깨졌을 때의 표준 요율을 적었습니다.<br><b>표준 요율이 실제로 나가는 경우</b>는 ① <b>영업점에서 개설</b>했거나 ② <b>회사에서 퇴직금을 옮겨왔</b>거나 ③ 키움처럼 <b>면제 기간이 끝난</b> 경우입니다. 특히 <b>삼성·미래에셋</b>은 개인부담금만 면제되는 게 기본이라, 퇴직금 이전분에는 0.24~0.30%가 그대로 붙습니다. 미래에셋은 여기에 「다이렉트 선택 + 전자매체로만 직접 운용」 두 요건을 채우면 퇴직금분까지 면제됩니다.</span></div>
+      <div class="note-item"><span class="nm">IRP 미취급 4곳</span><span>메리츠증권 · 유진투자증권 · 토스증권 · 카카오페이증권은 <b>퇴직연금사업자로 등록돼 있지 않습니다.</b> 금융감독원 통합연금포털 퇴직연금사업자 비교공시(2026년 2분기) 증권사 명단으로 확인했습니다. 키움증권은 <b>2026년 6월 1일 사업을 개시한 신규 사업자</b>입니다.</span></div>
+      <div class="note-item"><span class="nm">중개형ISA 미취급</span><span><b>토스증권</b>은 자체 중개형ISA를 취급하지 않습니다. 토스 앱에서 여는 중개형ISA는 <b>키움증권 계좌</b>입니다.</span></div>
+      <div class="note-item"><span class="nm">연금저축</span><span>13개사 전부 취급합니다. 토스증권은 2026년 7월에 출시했고, 금융기관 간 계좌이체·ISA 만기전환금 입금은 <b>아직 제공되지 않습니다.</b></span></div>
+    </div>
+  </div>
+
+  <!-- 중개형ISA 상세 -->
+  <div class="card" id="t-isa">
+    <div class="sec-head">
+      <div class="sec-eyebrow">TABLE 02</div>
+      <div class="sec-title">중개형ISA 매매수수료 상세</div>
+      <div class="sec-desc">
+        중개형ISA는 국내상장 주식·ETF를 직접 사고팔 수 있어, 일반 위탁계좌처럼 매매수수료가 그대로 붙습니다.<br>
+        대부분 <strong>ISA 전용 우대 요율</strong>을 따로 두는데, 상당수가 올해 개설분에만 평생 적용되는 구조입니다.<br>
+        반대로 <strong>전용 우대가 아예 없다고 명시</strong>한 곳도 있습니다.
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="t">
+        <thead>
+          <tr>
+            <th class="l">증권사</th>
+            <th class="l">계좌 유형</th>
+            <th>표기 요율</th>
+            <th>유관기관</th>
+            <th>실부담</th>
+            <th class="l">조건 · 기간</th>
+          </tr>
+        </thead>
+        <tbody id="tb-isa"></tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <div class="note-item"><span class="nm">금투협 비교공시</span><span>금융투자협회 ISA다모아는 <b>신탁형·일임형만 비교공시</b>하고 중개형은 다루지 않습니다. 중개형ISA 수수료는 각 사 공식 페이지를 직접 대조하는 방법밖에 없습니다.</span></div>
+      <div class="note-item"><span class="nm">확인필요 2곳</span><span><b>하나증권</b>은 수수료 안내에 계좌 유형 구분이 없어 ISA 전용 요율을 확인하지 못했습니다. <b>대신증권</b>은 「평생우대」 적용 사실은 공식 고지문에서 확인했으나 <b>할인율 수치가 고지문에 적혀 있지 않습니다.</b></span></div>
+      <div class="note-item"><span class="nm">"준용 추정"의 뜻</span><span>전용 수수료표가 없는 곳은 <b>일반 위탁계좌 요율을 그대로 쓰는 것으로 보입니다.</b> 유진투자증권은 "종합계좌 수수료율과 동일"이라 명시했고, 한국투자증권은 ISA 안내 페이지가 공용 위탁수수료표를 그대로 링크합니다.<br>다만 명시하지 않은 회사에까지 단정할 수는 없어, <b>확인필요로 두고 일반계좌 요율만 참고값으로 병기</b>했습니다. <b>순위 계산에서는 제외</b>했습니다.</span></div>
+    </div>
+  </div>
+
+  <!-- 연금저축 상세 -->
+  <div class="card" id="t-pen">
+    <div class="sec-head">
+      <div class="sec-eyebrow">TABLE 03</div>
+      <div class="sec-title">연금저축계좌 ETF 매매수수료 상세</div>
+      <div class="sec-desc">
+        연금저축계좌는 개별 주식을 살 수 없어, 실제로 부담하는 건 ETF 매매수수료입니다.<br>
+        <strong>세 계좌 중 공시가 가장 부실한 영역</strong>입니다. 전용 수수료표 없이 "상품별 수수료 적용"이라고만 적어둔 곳이 여럿입니다.<br>
+        확인하지 못한 곳은 일반계좌 요율을 <strong>참고값</strong>으로만 병기하고 순위에서는 뺐습니다.
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="t">
+        <thead>
+          <tr>
+            <th class="l">증권사</th>
+            <th class="l">계좌 유형</th>
+            <th>표기 요율</th>
+            <th>유관기관</th>
+            <th>실부담</th>
+            <th class="l">조건 · 기간</th>
+          </tr>
+        </thead>
+        <tbody id="tb-pen"></tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <div class="note-item"><span class="nm">"무료"의 의미</span><span>삼성증권 연금저축은 <b>증권사 위탁수수료가 0원</b>이지만 유관기관제비용은 고객 부담이라고 명시돼 있습니다. 실제로 나가는 돈은 ETF 기준 <b>0.0042087%</b>입니다. 키움증권 이벤트도 같은 구조입니다.</span></div>
+      <div class="note-item"><span class="nm">"준용 추정"의 뜻</span><span>전용 수수료표가 없는 곳은 <b>일반 위탁계좌 요율을 그대로 쓰는 것으로 보입니다.</b> 근거는 이렇습니다.<br>· <b>유진투자증권</b> — "매체별 수수료율 적용 · <b>종합계좌 수수료율과 동일</b>" 명시<br>· <b>토스증권</b> — "국내상장 ETF 매매 시 국내주식 거래수수료 별도 부과" 명시<br>· <b>한국투자증권</b> — ISA·연금저축 안내가 공용 위탁수수료표를 그대로 링크<br>· <b>신한투자증권</b> — 연금저축 안내가 「수수료 안내」를 링크하고, 그 페이지는 "별도의 수수료 체계를 적용 받는 계좌"로 <b>SOL LINK·S-Lite만 열거</b>(연금저축은 없음)<br>· <b>카카오페이증권</b> — 수수료표가 「Retail부문 표준수수료」 하나뿐이고 계좌 유형별 예외가 없음<br>· <b>NH나무·대신·하나</b> — 수수료표에 절세계좌를 지칭하는 행·문구가 전혀 없음<br>다만 <b>"예외 목록에 없다"는 건 배제 추론이지 확인이 아닙니다.</b> 그래서 확인필요로 두고 일반계좌 요율만 <b>참고값</b>으로 병기했고, <b>순위 계산에서는 제외</b>했습니다. 실제 요율은 고객센터 확인이 필요합니다(TABLE 11 참고).</span></div>
+      <div class="note-item"><span class="nm">한시 이벤트가 많다</span><span>미래에셋·삼성은 <b>2026.12.31</b>, KB는 2026.12.31, 키움은 <b>2026.9.30 신청분</b>까지입니다. 종료 후 요율이 어떻게 되는지 명시하지 않은 곳이 많아, 실제 개설 전에 종료 후 요율을 반드시 확인하시기 바랍니다.</span></div>
+    </div>
+  </div>
+
+  <!-- IRP 관리수수료 -->
+  <div class="card" id="t-irp">
+    <div class="sec-head">
+      <div class="sec-eyebrow">TABLE 04 · 핵심</div>
+      <div class="sec-title">IRP 운용관리 · 자산관리 수수료</div>
+      <div class="sec-desc">
+        <strong>IRP에서 진짜 비용은 매매수수료가 아니라 이 표</strong>입니다. 적립금 전체에 매년 붙습니다.<br>
+        1억원을 굴린다면 연 0.30%는 해마다 30만원입니다.<br>
+        다만 <strong>비대면으로 열면 9곳 모두 0%</strong>라, 표준 요율보다 면제 조건을 먼저 보셔야 합니다.<br>
+        적립금 구간이 나뉘는 곳은 구간을 전부 적었습니다.
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="t">
+        <thead>
+          <tr>
+            <th class="l">증권사</th>
+            <th class="l">적립금 구간</th>
+            <th class="r">운용관리</th>
+            <th class="r">자산관리</th>
+            <th class="r">합계(연)</th>
+            <th class="l">면제 조건</th>
+          </tr>
+        </thead>
+        <tbody id="tb-irp"></tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span class="li"><span class="chip chip-auto">전면면제</span> 조건 없이 0%</span>
+      <span class="li"><span class="chip chip-apply">비대면면제</span> 온라인·비대면 개설 시 면제</span>
+      <span class="li"><span class="chip chip-check">부분면제</span> 개인부담금 등 일부만 면제</span>
+      <span class="li"><span class="chip chip-warn">확인필요</span> 면제 범위가 원문에 정의돼 있지 않음</span>
+    </div>
+    <div class="notes">
+      <div class="note-item"><span class="nm">개인부담금 vs 퇴직금</span><span>IRP에는 <b>내가 직접 넣은 돈(개인부담금)</b>과 <b>회사에서 옮겨온 퇴직금</b>이 섞여 있습니다. 면제가 개인부담금에만 적용되는 곳과 계좌 전체에 적용되는 곳이 나뉩니다. <b>퇴직금을 옮겨오실 분에게는 이 차이가 결정적</b>이라 뭉개지 않고 그대로 적었습니다. 다만 하나증권처럼 원문에 적용 범위 정의가 없는 곳은 확인필요로 뒀습니다.</span></div>
+      <div class="note-item"><span class="nm">IRP ETF 매매수수료</span><span>관리수수료와 별개로, IRP 안에서 ETF를 사고팔 때 붙는 매매수수료는 <b>공시하는 증권사가 거의 없습니다.</b> "0원"이라고 안내하는 곳도 있지만 같은 페이지의 유의사항과 어긋나거나 현재 유효한 공시를 찾을 수 없었습니다.<br>ETF로 굴리실 계획이면 <b>개설 전에 고객센터로 확인</b>하시는 게 안전합니다(TABLE 11에 물어볼 문장을 넣어뒀습니다).</span></div>
+      <div class="note-item"><span class="nm">위험자산 70%</span><span>IRP는 적립금의 <b>70%까지만 위험자산</b>에 넣을 수 있고 30%는 안전자산이어야 합니다. 사전지정운용제도(디폴트옵션)를 쓰면 100%까지 가능합니다. 이 규제를 없애자는 논의가 있었으나 <b>2026년 8월 현재 시행되지 않았습니다.</b></span></div>
+    </div>
+  </div>
+
+  <!-- 이벤트 · 수수료 우대 -->
+  <div class="card" id="t-evfee">
+    <div class="sec-head">
+      <div class="sec-eyebrow">TABLE 05 · 이벤트</div>
+      <div class="sec-title">수수료 우대 이벤트 — 자동인가, 신청해야 하나</div>
+      <div class="sec-desc">
+        절세계좌 우대 요율은 대부분 이벤트로 운영됩니다.<br>
+        문제는 <strong>계좌만 열면 되는 곳과 따로 신청해야 하는 곳이 섞여 있다</strong>는 겁니다.<br>
+        신한투자증권은 신청을 안 하면 MTS 0.188%, 신청하면 0.0036396%로 <strong>50배</strong> 갈립니다.<br>
+        고지문에 "자동 적용"이나 "신청 필수" 문구가 실제로 있는 것만 판정했습니다.
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="t">
+        <thead>
+          <tr>
+            <th class="l">증권사 · 이벤트</th>
+            <th>계좌</th>
+            <th class="l">혜택</th>
+            <th>적용 방식</th>
+            <th class="l">대상 · 기간</th>
+          </tr>
+        </thead>
+        <tbody id="tb-evfee"></tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <div class="note-item"><span class="nm">놓치면 손해</span><span><b>키움증권 연금저축 ETF 수수료 면제는 2026년 9월 30일이 신청 마감</b>입니다. 신청하면 그날부터 1년간 적용되고, 놓치면 다음 회차를 기다려야 합니다. 신한투자증권 ISA 이벤트는 12월 31일까지 신청 가능하지만 <b>신청 시점 이후 체결분부터</b> 적용돼, 늦게 신청할수록 그 전 거래는 표준 요율로 나갑니다.</span></div>
+      <div class="note-item"><span class="nm">이벤트가 아닌 것</span><span><b>IRP 관리수수료 면제는 이벤트가 아니라 상시 제도</b>입니다. 미래에셋·한국투자·KB·대신은 비대면·온라인으로 개설하면 면제되고, 신한·NH나무는 조건 없이 0%입니다. 위 TABLE 04를 보세요.</span></div>
+      <div class="note-item"><span class="nm">확인 못 한 곳</span><span><b>한국투자증권 · 메리츠증권</b>은 진행 중인 절세계좌 이벤트를 확인하지 못했습니다. <b>토스증권 · 카카오페이증권</b>은 절세계좌 전용 이벤트가 공시돼 있지 않습니다.<br><b>하나증권</b>은 수수료 우대 이벤트는 없고 리워드 이벤트만 진행합니다(TABLE 06).</span></div>
+    </div>
+  </div>
+
+  <!-- 이벤트 · 리워드 -->
+  <div class="card" id="t-evreward">
+    <div class="sec-head">
+      <div class="sec-eyebrow">TABLE 06 · 이벤트</div>
+      <div class="sec-title">현금 · 상품권 리워드 이벤트</div>
+      <div class="sec-desc">
+        계좌를 열거나 돈을 넣으면 상품권을 주는 이벤트입니다. 수수료 우대와 성격이 달라 표를 나눴습니다.<br>
+        <strong>수시로 바뀌고 조기 종료됩니다.</strong> 2026년 8월 20일 조회 시점 기준이라, 신청 전에 각 사 게시판을 다시 보셔야 합니다.<br>
+        "최대 ○○만원"은 대부분 <strong>수억 원을 넣었을 때의 상한값</strong>입니다.
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="t">
+        <thead>
+          <tr>
+            <th class="l">증권사</th>
+            <th>계좌</th>
+            <th class="l">리워드</th>
+            <th>적용 방식</th>
+            <th class="l">조건 · 기간</th>
+          </tr>
+        </thead>
+        <tbody id="tb-evreward"></tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <div class="note-item"><span class="nm">곧 끝나는 것</span><span><b>2026년 9월 30일 이전 종료</b> — NH투자증권 IRP 리워드(8.31) · KB증권 ISA 순입금 시즌3(8.31) · 키움증권 ISA·연금저축(9월말) · 신한투자증권 IRP 3분기(9.30) · 유진투자증권 ISA(9.30). 삼성증권 5~7월분은 <b>이미 종료</b>됐고 후속 회차가 진행 중이라는 정황은 있으나 확인하지 못했습니다.</span></div>
+      <div class="note-item"><span class="nm">타사 이전 가산</span><span>여러 곳이 <b>다른 증권사에서 옮겨온 금액을 1.5~2배로 인정</b>합니다(미래에셋 1.5배, NH·KB 2배). 새로 넣는 돈보다 옮기는 돈이 리워드는 크지만, 옮기는 과정에서 <b>기존 계좌의 우대 요율을 잃을 수 있으니</b> 수수료 표와 같이 보셔야 합니다.</span></div>
+      <div class="note-item"><span class="nm">리워드보다 수수료</span><span>상품권 3만원은 한 번이지만 수수료는 <b>거래할 때마다, 관리수수료는 매년</b> 나갑니다. 1억원 IRP에서 관리수수료 0.30%면 연 30만원입니다. 리워드만 보고 고르면 손해 보는 구조입니다.</span></div>
+    </div>
+  </div>
+
+  <!-- IRP 수수료 계산기 -->
+  <div class="card" id="t-calc">
+    <div class="sec-head">
+      <div class="sec-eyebrow">TABLE 07</div>
+      <div class="sec-title">내 IRP 적립금으로 계산해보기</div>
+      <div class="sec-desc">
+        적립금을 넣으면 위 표의 요율을 적용해 연간 관리수수료로 바꿔 보여드립니다.<br>
+        기본값은 <strong>영업점에서 열었거나 퇴직금을 옮겨온 경우</strong>입니다. 실제로 돈이 나가는 상황이라 이쪽을 먼저 보여드립니다.<br>
+        비대면으로 여시면 <strong>9곳 모두 0원</strong>입니다.
+      </div>
+    </div>
+    <div class="calc-grid">
+      <div>
+        <label class="label">IRP 적립금 (원)</label>
+        <input type="number" id="amount" value="100000000" step="10000000" min="0">
+        <div class="input-hint" id="amount-hint">1억원</div>
+      </div>
+      <div>
+        <label class="label">면제 조건 충족 여부</label>
+        <div class="segment" id="free-seg">
+          <button data-f="std" class="active">영업점 개설 · 퇴직금</button>
+          <button data-f="repr">비대면 개설</button>
+        </div>
+        <div class="input-hint">비대면으로 열면 9곳 모두 0원입니다</div>
+      </div>
+      <div>
+        <label class="label">&nbsp;</label>
+        <div class="input-hint" style="margin-top:14px">
+          ※ 매매수수료·상품 보수(ETF 총보수 등)는 <b>포함하지 않은</b> 값입니다.
+        </div>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="t">
+        <thead>
+          <tr>
+            <th class="l">증권사</th>
+            <th class="r">적용 요율(연)</th>
+            <th class="r">연간 수수료</th>
+            <th class="r">10년 누적</th>
+            <th class="l">비고</th>
+          </tr>
+        </thead>
+        <tbody id="tb-calc"></tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <div class="note-item"><span class="nm">10년 누적</span><span>적립금이 그대로 유지된다고 가정한 <b>단순 곱셈</b>입니다. 실제로는 적립금이 늘면 수수료도 늘고, 구간이 바뀌면 요율도 달라집니다.</span></div>
+    </div>
+  </div>
+
+  <!-- 계좌별 세제 -->
+  <div class="card" id="t-tax">
+    <div class="sec-head">
+      <div class="sec-eyebrow">TABLE 08</div>
+      <div class="sec-title">계좌별 세제 혜택 · 한도 정리</div>
+      <div class="sec-desc">
+        수수료만 비교하면 오해가 생깁니다.<br>
+        절세계좌는 <strong>세제 혜택 · 납입한도 · 매매 가능 상품이 함께 걸려 있는 상품</strong>이라 조건을 같이 봐야 합니다.<br>
+        아래 수치는 <strong>2026년 8월 20일 현재 시행 중인 법령</strong> 기준입니다.
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="t">
+        <thead>
+          <tr>
+            <th class="l">항목</th>
+            <th class="l">중개형ISA</th>
+            <th class="l">연금저축계좌</th>
+            <th class="l">IRP</th>
+          </tr>
+        </thead>
+        <tbody id="tb-tax"></tbody>
+      </table>
+    </div>
+    <div class="tax-warn">
+      <div class="tax-warn-t">⚠️ "2026년부터 ISA 한도가 4,000만원으로 늘어난다"는 이야기 — 시행되지 않았습니다</div>
+      <div class="tax-warn-v">
+        정부가 2024년과 2025년에 걸쳐 <b>ISA 납입한도 연 4,000만원·총 2억원, 비과세 한도 500만원(서민형 1,000만원), 국내투자형 ISA 신설</b>을 추진한 것은 사실입니다.<br>
+        그러나 <b>2025년 12월 2일 국회 본회의에서 의결된 세법개정 항목에 조세특례제한법 제91조의18(ISA) 개정은 포함되지 않았습니다.</b><br>
+        2026년 8월 현재 유효한 수치는 위 표 그대로 <b>연 2,000만원 · 총 1억원 · 비과세 200만원(서민형 400만원)</b>입니다.<br>
+        상향된 수치를 "이미 시행 중"으로 소개하는 자료가 인터넷에 다수 있으니, 실제 가입 전 국세청 홈택스에서 다시 확인하시기 바랍니다.
+      </div>
+    </div>
+    <div class="notes">
+      <div class="note-item"><span class="nm">2026년에 바뀐 것</span><span>연금계좌 쪽에서는 실제로 바뀐 게 있습니다. <b>종신형 연금계약의 원천징수세율이 4%→3%(지방세 포함 4.4%→3.3%)로 인하</b>돼 2026.1.1 이후 수령분부터 적용되고, <b>퇴직소득을 20년 초과 연금으로 받을 때 원천징수세율이 60%→50%</b>로 내렸습니다. 연금소득 분리과세 기준금액 1,500만원 상향은 2025.1.1부터 이미 시행 중입니다.</span></div>
+      <div class="note-item"><span class="nm">확인 권장</span><span>세법 수치는 개정이 잦습니다. 위 값은 조세특례제한법 제91조의18, 소득세법 제59조의3·제64조의4·제129조를 기준으로 정리했으나, <b>가입·인출을 결정하시기 전에 국세청 홈택스에서 최신 기준을 다시 확인</b>하시는 게 가장 정확합니다.</span></div>
+    </div>
+  </div>
+
+  <!-- 투자 가능 상품 -->
+  <div class="card" id="t-prod">
+    <div class="sec-head">
+      <div class="sec-eyebrow">TABLE 09</div>
+      <div class="sec-title">계좌별 투자 가능 상품 범위</div>
+      <div class="sec-desc">
+        수수료가 아무리 싸도 <strong>사고 싶은 상품을 못 사면 의미가 없습니다.</strong><br>
+        세 계좌는 담을 수 있는 상품이 서로 다르고, 특히 <strong>연금저축·IRP는 레버리지·인버스 ETF를 담을 수 없습니다.</strong>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="t">
+        <thead>
+          <tr>
+            <th class="l">상품</th>
+            <th>중개형ISA</th>
+            <th>연금저축계좌</th>
+            <th>IRP</th>
+          </tr>
+        </thead>
+        <tbody id="tb-prod"></tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <div class="note-item"><span class="nm">증권사별로 더 좁을 수 있다</span><span>위 표는 <b>제도상 한도</b>입니다. 증권사가 자체적으로 더 좁게 운영하는 경우가 있습니다. 예를 들어 메리츠증권 연금저축은 <b>ETF(파생형 제외)·리츠·공모인프라펀드만</b>, 미래에셋 다이렉트 연금저축 우대 요율은 <b>ETF·리츠에만</b> 적용됩니다.</span></div>
+      <div class="note-item"><span class="nm">해외주식 직접투자</span><span>세 계좌 <b>전부 불가</b>합니다. 미국 주식에 투자하시려면 <b>국내에 상장된 해외지수 ETF</b>(S&amp;P500·나스닥100 추종 등)로 담아야 합니다.</span></div>
+    </div>
+  </div>
+
+  <!-- 확인 링크 -->
+  <div class="card" id="t-link">
+    <div class="sec-head">
+      <div class="sec-eyebrow">TABLE 10 · 갱신용</div>
+      <div class="sec-title">증권사별 공식 확인 링크</div>
+      <div class="sec-desc">
+        위 표의 모든 수치를 확인한 <strong>원본 페이지 주소</strong>입니다.<br>
+        요율이나 이벤트가 바뀌었다는 이야기가 나오면 해당 증권사 링크부터 열어서 대조하시면 됩니다.<br>
+        모두 <strong>2026년 8월 20일 접속 확인</strong>했으며, 증권사가 URL 구조를 바꾸면 끊길 수 있습니다.
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="t">
+        <thead>
+          <tr>
+            <th class="l">증권사</th>
+            <th class="l">확인 페이지</th>
+          </tr>
+        </thead>
+        <tbody id="tb-link"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 고객센터 문의 -->
+  <div class="card" id="t-ask">
+    <div class="sec-head">
+      <div class="sec-eyebrow">TABLE 11 · 직접 확인용</div>
+      <div class="sec-title">확인하지 못한 항목 — 이렇게 물어보세요</div>
+      <div class="sec-desc">
+        표에서 <strong>확인필요</strong>로 남긴 것들은 공식 페이지에서 확인하지 못한 항목입니다.<br>
+        그 증권사가 안 준다는 뜻이 아니라 <strong>공시하지 않는다는 뜻</strong>입니다.<br>
+        고객센터에 그대로 읽어서 물어보실 수 있게 문장으로 만들어 뒀습니다.
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="t">
+        <thead>
+          <tr>
+            <th class="l">증권사 · 대표번호</th>
+            <th class="l">확인할 것</th>
+            <th class="l">그대로 읽어서 물어보실 문장</th>
+          </tr>
+        </thead>
+        <tbody id="tb-ask"></tbody>
+      </table>
+    </div>
+    <div class="ask-common">
+      <div class="ask-common-k">💬 IRP를 여실 거라면 어느 증권사든 공통으로 — IRP ETF 매매수수료는 삼성증권 외에는 공시하는 곳이 사실상 없습니다</div>
+      <div class="ask-common-v" id="ask-common"></div>
+    </div>
+    <div class="notes">
+      <div class="note-item"><span class="nm">참고 기준치</span><span>금융감독원이 2026년 5월 21일 발표한 업계 조사에 따르면, 연금저축계좌의 ETF 매매수수료는 <b>온라인 개설 계좌 0.01~0.015%, 영업점 개설 계좌 0.1~0.2%, 영업점에서 거래하면 0.4~0.5%</b>입니다. 회사명은 특정되지 않았지만 <b>같은 회사라도 개설 채널에 따라 최대 10배 이상 차이</b>가 난다는 뜻이니, 고객센터에 물으실 때 "제 계좌가 어느 채널로 개설된 건가요"를 함께 확인하시면 좋습니다.</span></div>
+      <div class="note-item"><span class="nm">물어보실 때</span><span>계좌 종류(중개형ISA·연금저축·IRP), 매체(모바일·PC), 상품(국내주식·ETF)을 <b>다 붙여서 물어보셔야</b> 정확한 답이 옵니다. "수수료 얼마예요"만 물으면 일반 위탁계좌 요율을 안내받는 경우가 많습니다.</span></div>
+    </div>
+  </div>
+
+  <!-- 인사이트 -->
+  <div class="insight-box">
+    <div class="insight-label">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D9542B" stroke-width="2"><path d="M12 3l1.9 5.8L20 10l-4.5 3.3L17 20l-5-3.5L7 20l1.5-6.7L4 10l6.1-1.2L12 3z"/></svg>
+      <span class="insight-label-text">KEY INSIGHT</span>
+    </div>
+    <h3 class="insight-title">표를 볼 때 꼭 확인해야 할 다섯 가지</h3>
+    <p class="insight-desc">
+      <strong>첫째, 계좌만 여는 걸로 되는 곳과 신청까지 해야 하는 곳이 갈립니다.</strong>
+      삼성증권 ISA 평생혜택과 대신증권 ISA 평생우대는 고지문에 "자동 적용"이라고 적혀 있어 계좌만 열면 됩니다.
+      반면 <strong>신한투자증권 ISA는 이벤트 신청 버튼을 눌러야</strong> 유관기관제비용 수준(0.0036396%)이 되고, 안 누르면 MTS 기준 0.188%가 그대로 나갑니다. 50배 차이입니다.
+      게다가 신한은 <strong>신청 시점 이후 체결분부터</strong> 적용돼, 늦게 신청하면 그 전 거래는 소급이 안 됩니다.
+      키움증권 연금저축 ETF 수수료 면제는 <strong>2026년 9월 30일이 신청 마감</strong>입니다.
+      계좌를 여셨다면 그날 바로 이벤트 페이지에서 신청까지 마치시는 게 안전합니다.
+    </p>
+    <p class="insight-desc">
+      <strong>둘째, IRP는 매매수수료가 아니라 관리수수료 싸움입니다.</strong>
+      ETF를 한 번 사고팔 때 0.015%를 내는 것과, 적립금 전체에 매년 0.30%가 붙는 것은 차원이 다릅니다.
+      1억원을 IRP에 넣어두면 연 0.30%는 <strong>해마다 30만원</strong>이고 10년이면 300만원입니다.
+      그런데 각 사 퇴직연금 수수료 공시를 보면 <strong>IRP를 취급하는 9곳 전부 비대면·온라인으로 열면 관리수수료가 0%</strong>였습니다.
+      신한투자증권과 NH투자증권(나무)은 아예 조건이 없고, 키움증권은 사업 첫해라 가입 후 1년을 면제합니다.
+      즉 <strong>이 돈이 나가는 건 영업점에서 열었을 때</strong>입니다. 표의 0.25~0.30%는 그 경우의 값입니다.
+      단, <strong>퇴직금을 옮겨오는 분은 이야기가 다릅니다.</strong> 삼성증권과 미래에셋증권은 기본적으로 <strong>개인부담금만</strong> 면제라, 회사에서 넘어온 퇴직급여에는 요율이 그대로 붙습니다.
+      미래에셋은 「계좌관리점을 다이렉트로 선택 + 전자매체로만 직접 운용」 두 요건을 채우면 퇴직금분까지 면제됩니다.
+    </p>
+    <p class="insight-desc">
+      <strong>셋째, "평생우대"는 대부분 올해 개설분 한정입니다.</strong>
+      미래에셋 다이렉트 ISA, 삼성 「평생혜택」 모두 <strong>2026년 안에 계좌를 열어야</strong> 그 요율이 평생 따라옵니다.
+      즉 평생 혜택이라는 말은 "언제든 받을 수 있다"가 아니라 "지금 열면 평생 간다"는 뜻입니다.
+      반대로 미래에셋은 계좌관리점을 영업점으로 바꾸면 우대가 사라진다는 안내가 있어, 개설 후 관리점을 건드리지 않는 것도 조건의 일부입니다.
+    </p>
+    <p class="insight-desc">
+      <strong>넷째, 수수료 "0원"이 진짜 0원은 아닙니다.</strong>
+      삼성증권 연금저축은 증권사 수수료가 0원이지만 유관기관제비용은 고객 부담이라 실제로는 ETF 기준 0.0042087%가 나갑니다.
+      키움증권 연금저축 이벤트도 같은 구조입니다. 표에서 <strong>실부담 칸</strong>을 보셔야 회사끼리 제대로 비교됩니다.
+    </p>
+    <p class="insight-desc">
+      <strong>다섯째, 연금저축 수수료는 공시 자체가 부실합니다.</strong>
+      13개사 중 상당수가 연금저축 전용 수수료표를 두지 않고 "상품별 수수료 적용"이라고만 적어놨습니다.
+      이 표에서 빈칸으로 남긴 곳들은 없다는 뜻이 아니라 <strong>공식 페이지에서 확인하지 못했다는 뜻</strong>입니다.
+      개설 전에 고객센터에 "연금저축계좌에서 국내상장 ETF를 살 때 수수료율이 얼마인가요"라고 딱 그 문장으로 물어보시면 됩니다.
+    </p>
+    <div class="insight-cta">
+      <div class="insight-cta-text">📊 계좌 종류별 절세·수수료 정리, 더 알고 싶다면?</div>
+      <a href="https://www.youtube.com/@ttok_jae" target="_blank" rel="noopener" class="cta-link primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        똑재TV 구독하기
+      </a>
+      <a href="https://cafe.naver.com/ttokjae" target="_blank" rel="noopener" class="cta-link secondary">
+        <span class="naver-mark">N</span>
+        평생 ETF 투자 카페 가입
+      </a>
+    </div>
+  </div>
+
+  <div class="source-box">
+    <div class="source-title">📌 데이터 출처와 한계</div>
+    <div class="source-text">
+      · 모든 수치는 <b>2026년 8월 20일</b>에 각 증권사 공식 수수료 안내·퇴직연금 수수료율 공시·절세계좌 안내 페이지에서 직접 확인한 값입니다.<br>
+      · <b>신규 개설 기준입니다.</b> 이미 보유 중인 절세계좌는 개설 시점의 이벤트 회차·계좌관리점·신청 이력에 따라 요율이 달라지므로 <b>개별 확인이 필요합니다.</b><br>
+      · 매매수수료는 <b>비대면·온라인 주문</b> 기준이며, 영업점 개설 계좌는 요율이 크게 다릅니다.<br>
+      · <b>실부담</b>은 표기 요율에 유관기관제비용(주식 0.0036396% / ETF·ETN 0.0042087%)을 더한 값입니다. 증권사가 이미 포함해 표기한 경우에는 그대로 씁니다.<br>
+      · <b>IRP 관리수수료는 표준 요율</b>이며, 면제 조건 충족 시 실부담은 0%가 됩니다. 면제 조건과 적용 범위(개인부담금만 / 계좌 전체)는 회사마다 다릅니다.<br>
+      · <b>IRP 취급 여부</b>는 금융감독원 통합연금포털 퇴직연금사업자 비교공시(2026년 2분기) 증권사 명단으로 확인했습니다. 중개형ISA 취급 여부는 각 사 공식 페이지로 확인했으며, 금융투자협회 ISA다모아는 <b>신탁형·일임형만 비교공시</b>하고 중개형은 다루지 않습니다.<br>
+      · <span class="chip chip-warn">확인필요</span> 표시는 공식 페이지에서 수치를 확인하지 못했거나 자료 간 표기가 상충하는 항목입니다. <b>해당 항목이 없다는 뜻이 아닙니다.</b> 해당 증권사에 직접 확인하시기 바랍니다.<br>
+      · <b>세제 수치</b>는 조세특례제한법 제91조의18, 소득세법 제59조의3·제64조의4·제129조 및 국세청 안내를 기준으로 정리했습니다. 2025년 12월 2일 국회 의결 세법개정 내용까지 반영했으며, <b>ISA 한도 상향은 시행되지 않았습니다.</b><br>
+      · <b>회사 규모</b>는 자기자본(연결) 기준이며 각 사 2026년 반기보고서(2026.06.30, DART)에서 확인했습니다. 비상장사인 토스증권·카카오페이증권만 2026.03.31 기준 언론 보도 수치를 썼습니다.<br>
+      · <b>상품 수익률·ETF 총보수·펀드 보수는 다루지 않았습니다.</b> 계좌 수수료만 정리한 표입니다.
+    </div>
+  </div>
+
+  <footer>
+    ※ 본 자료는 <b>신규 계좌 개설을 기준</b>으로 한 정보 제공용 비교표이며, 특정 증권사 가입이나 특정 상품 투자를 권유하지 않습니다.<br>
+    이미 사용 중인 계좌의 실제 수수료와 세제 적용은 해당 증권사·국세청에서 직접 확인하세요.<br>
+    수수료율·이벤트 조건·세법은 수시로 변경되므로 실제 가입 전 반드시 공식 안내를 확인하세요.
+  </footer>
+
+</div>
+<script>
+// ============================================================
+// 데이터 — 2026-08-20 각 증권사 공식 공시 확인 기준
+// 갱신 시 이 블록만 고치면 됩니다.
+// ============================================================
+var MISC_STK = 0.0036396; // 유관기관제비용 (유가·코스닥·코넥스)
+var MISC_ETF = 0.0042087; // 유관기관제비용 (ETF·ETN)
+
+// 회사 규모 — 자기자본(연결), 단위 조원
+// 2026.06.30 반기보고서(DART) 기준. 토스·카카오페이는 비상장이라 2026.03.31 언론 보도 기준.
+var SIZE = {
+  mirae:    { rank:1,  eq:16.25, asOf:'2026.06' },
+  kis:      { rank:2,  eq:13.90, asOf:'2026.06' },
+  namuh:    { rank:3,  eq:10.87, asOf:'2026.06' },
+  meritz:   { rank:4,  eq:9.05,  asOf:'2026.06' },
+  samsung:  { rank:5,  eq:8.66,  asOf:'2026.06' },
+  kb:       { rank:6,  eq:8.22,  asOf:'2026.06' },
+  kiwoom:   { rank:7,  eq:7.58,  asOf:'2026.06' },
+  hana:     { rank:8,  eq:6.80,  asOf:'2026.06' },
+  shinhan:  { rank:9,  eq:6.04,  asOf:'2026.06' },
+  daishin:  { rank:10, eq:4.56,  asOf:'2026.06' },
+  eugene:   { rank:11, eq:1.24,  asOf:'2026.06' },
+  toss:     { rank:12, eq:0.72,  asOf:'2026.03' },
+  kakaopay: { rank:13, eq:0.23,  asOf:'2026.03' }
+};
+
+var NAME = {
+  mirae:'미래에셋증권', kis:'한국투자증권', namuh:'NH투자증권', meritz:'메리츠증권',
+  samsung:'삼성증권', kb:'KB증권', kiwoom:'키움증권', hana:'하나증권',
+  shinhan:'신한투자증권', daishin:'대신증권', eugene:'유진투자증권',
+  toss:'토스증권', kakaopay:'카카오페이증권'
+};
+var ORDER = ['mirae','kis','namuh','meritz','samsung','kb','kiwoom','hana','shinhan','daishin','eugene','toss','kakaopay'];
+
+// misc: 'inc'=포함(명시) / 'inc*'=포함(정황·추론) / 'sep'=별도(명시) / 'warn'=포함여부 미확인
+// effLo·effHi: 실부담. 포함여부가 미확인이면 하한~상한 범위. null=확인 못 함
+// state: 'ok' | 'warn'(확인필요) | 'none'(미취급)
+var ISA = {
+  mirae:   { state:'ok', acct:'다이렉트 ISA', raw:'0.0036396%', sub:'일반 다이렉트 0.014%',
+             misc:'inc', effLo:0.0036396, effHi:0.0036396, apply:'auto',
+             cond:'<b class="tgt-ok">평생우대 · 신청 불요</b> — 다이렉트(비대면) 계좌 한정.<br>계좌관리점을 영업점으로 바꾸면 우대가 사라진다는 안내가 있습니다.' },
+  kis:     { state:'ok', acct:'뱅키스(비대면)', raw:'0.0140527%', sub:'ETF·ETN 0.0146527%',
+             misc:'inc', effLo:0.0140527, effHi:0.0140527, apply:'auto',
+             cond:'<b>ISA 전용 우대 요율 없음</b> — 공용 위탁수수료표를 그대로 적용합니다.<br>영업점 개설 계좌는 0.147%. 언론이 말하는 "ISA 평생혜택"은 공식 페이지에서 확인하지 못했습니다.' },
+  namuh:   { state:'ok', acct:'나무 앱(비대면)', raw:'0.0043319%', sub:'ETF·ETN 0.0049010%',
+             misc:'inc*', effLo:0.0043319, effHi:0.0043319, apply:'auto',
+             cond:'<b class="tgt">2026.02.01 ~ 2027.01.31 개설분</b> · 개설일부터 <b>12개월 한정</b> · 신청 불요.<br>평생우대가 아니며, 종료 후 적용 요율은 공시에서 확인하지 못했습니다.' },
+  meritz:  { state:'ok', acct:'디지털관리 계좌', raw:'0.009%', sub:'채권 0.015%',
+             misc:'warn', effLo:0.009, effHi:0.0126396, apply:'auto',
+             cond:'영업점 계좌는 일반 구간별 요율(0.078132 ~ 0.198132%)이 적용됩니다.<br>유관기관제비용이 이 0.009%에 <b>포함인지 별도인지 명시가 없어</b> 실부담을 범위로 적었습니다.<br>같은 안내의 Super365 항목에는 "유관기관수수료 포함"이 따로 붙어 있어, 별도 부과일 가능성이 높습니다.' },
+  samsung: { state:'ok', acct:'비대면', raw:'0.0036396%', sub:'ETF·ETN 0.0042087%',
+             misc:'inc', effLo:0.0036396, effHi:0.0036396, apply:'auto',
+             cond:'<b class="tgt">2026.1.1 ~ 12.31 개설분 한정</b> 「평생혜택」 · 신청 불요.<br>이 기간에 열어야 평생 적용됩니다. 법인·외국인·미성년자는 제외입니다.' },
+  kb:      { state:'ok', acct:'비대면·은행연계 저가수수료계좌', raw:'HTS 0.015% / MTS 0.12%', sub:'국내 ETF 기준 · <b>매체별 8배 차이</b>',
+             misc:'inc', effLo:0.015, effHi:0.12, effNote:'HTS ~ MTS', apply:'auto',
+             cond:'<b>ISA 전용 우대 요율은 없습니다.</b> 2026년 ISA 안내 페이지 고지문에 "비대면·은행연계 저가수수료계좌의 국내 ETF 거래수수료율 HTS 0.015% / 모바일 0.12%"로 적혀 있습니다.<br>과거 ISA 전용 「평생혜택」(주식 0.0044792% · ETF 0.0050483%)은 <b>2024년 3월 신청분으로 끝났습니다.</b> 현재 진행 중인 「평생혜택」은 ISA가 아니라 <b>생애 최초 비대면 일반 위탁계좌</b> 대상입니다.<br><b>모바일로 거래하면 HTS의 8배</b>입니다. 매체 선택에 주의하세요.' },
+  kiwoom:  { state:'ok', acct:'영웅문(비대면)', raw:'0.015%', sub:'NXT 0.0145%',
+             misc:'sep', effLo:0.0186396, effHi:0.0186396, apply:'auto',
+             cond:'<b>절세계좌 전용 우대가 없다고 공식 명시</b>돼 있습니다 — "상품별 수수료 그대로 적용".<br>유관기관 수수료는 고객 부담이라고 별도로 적혀 있습니다.' },
+  hana:    { state:'warn', acct:'—', raw:null, sub:null,
+             misc:null, effLo:null, effHi:null, apply:null,
+             ref:'일반계좌 <b>0.0141639%</b> 준용 추정',
+             cond:'<b>공식 수수료 안내에 절세계좌 구분이 없습니다.</b> 계좌 유형별 요율을 따로 공시하지 않습니다.<br>일반 비대면 L등급(0.0141639%)을 준용하는지도 명시가 없어 단정할 수 없습니다.' },
+  shinhan: { state:'ok', acct:'비대면 · 신청 필수', raw:'0.0036396%', sub:'ETF 0.0042087%',
+             misc:'inc', effLo:0.0036396, effHi:0.0036396, apply:'apply',
+             mustNote:'미신청 시 MTS 0.189%<br>· 소급 안 됨',
+             cond:'<b class="tgt">「2026년 국내주식 수수료 이벤트」를 신청해야</b> 유관기관제비용만 부담합니다 · 2026.1.2 ~ 12.31.<br>미신청 시 표준요율 MTS 0.1882 ~ 0.1892% / HTS 구간별 0.0892 ~ 0.4992%.<br>SOL LINK(0.01%)·S-Lite(0.013%) 우대는 <b>ISA·IRP·DB·DC 제외</b>로 명시돼 있습니다.' },
+  daishin: { state:'ok', acct:'크레온(온라인)', raw:'0.015%', sub:'사이보스 MTS 0.1972959%',
+             misc:'inc', effLo:0.015, effHi:0.015, apply:'auto',
+             cond:'<b class="tgt-ok">「중개형ISA 수수료 평생우대」 자동 적용</b> — 2026.1.1 이후 신규 또는 2025년 국내주식 무거래 고객, 온라인 매체 한정(2026.1.1 ~ 12.31 개설분).<br><b>다만 공식 고지문에 할인율 수치가 적혀 있지 않아</b> 우대 적용 후 요율은 확인하지 못했습니다.' },
+  eugene:  { state:'ok', acct:'구간별', raw:'0.13 ~ 0.15%', sub:'스마트폰 기준 · HTS 0.08 ~ 0.18%',
+             misc:'warn', effLo:0.13, effHi:0.1536396, apply:'auto', tier:true,
+             cond:'ISA 전용 우대 요율이 없습니다.<br>「비대면 신규 1년 0.0049%」 이벤트는 <b>종합매매계좌 전용이라 ISA·연금저축에는 적용되지 않습니다.</b>' },
+  toss:    { state:'none', acct:'—', raw:null, sub:null, misc:null, effLo:null, effHi:null, apply:null,
+             cond:'<b>자체 중개형ISA를 취급하지 않습니다.</b><br>토스 앱에서 여는 중개형ISA는 <b>키움증권 계좌</b>입니다.' },
+  kakaopay:{ state:'ok', acct:'모바일 전용', raw:'0.015%', sub:'NXT 0.014% · 최소수수료 1원',
+             misc:'inc*', effLo:0.015, effHi:0.015, apply:'auto',
+             cond:'가입·중도해지 수수료와 계좌관리 보수가 없다고 공식 설명서에 명시돼 있습니다.<br>유관기관제비용을 별도 항목으로 표기하지 않아 포함으로 보입니다.' }
+};
+
+var PEN = {
+  mirae:   { state:'ok', acct:'다이렉트', raw:'0.0036396%', sub:'일반 다이렉트 0.014%',
+             misc:'inc*', effLo:0.0036396, effHi:0.0036396, apply:'auto',
+             cond:'<b class="tgt">~ 2026.12.31</b> · 대상 상품 <b>ETF·리츠만</b>.<br>영업점 계좌는 온라인 0.14% / 오프라인 0.49%입니다.' },
+  kis:     { state:'ok', acct:'뱅키스', raw:'0.0140527%', sub:'ETF·ETN 0.0146527%',
+             misc:'inc', effLo:0.0140527, effHi:0.0140527, apply:'auto',
+             cond:'연금저축 전용 행이 없어 공용 위탁수수료표를 그대로 적용합니다.<br>투자 대상은 펀드·국내상장 ETF·상장리츠·인프라펀드이며 <b>레버리지·인버스는 제외</b>입니다.' },
+  namuh:   { state:'warn', acct:'—', raw:null, sub:null, misc:null, effLo:null, effHi:null, apply:null,
+             ref:'나무 일반계좌 <b>0.01 ~ 0.0141639%</b> 준용 추정',
+             cond:'<b>공식 수수료 안내에 계좌 유형 구분이 없어 연금저축 전용 요율을 확인하지 못했습니다.</b><br>투자 가능 상품은 펀드와 국내상장 ETF만(개별 주식 불가)으로 확인됩니다.' },
+  meritz:  { state:'ok', acct:'디지털관리', raw:'0.009%', sub:'채권 0.015%',
+             misc:'warn', effLo:0.009, effHi:0.0126396, apply:'auto',
+             cond:'대상 상품이 <b>ETF(파생형 제외)·리츠·공모인프라펀드</b>로 한정돼 있습니다.<br>유관기관제비용 포함 여부는 확인하지 못했습니다.' },
+  samsung: { state:'ok', acct:'비대면·영업점 공통', raw:'0%', sub:'증권사 위탁수수료 면제',
+             misc:'sep', effLo:0.0042087, effHi:0.0042087, apply:'auto',
+             cond:'<b class="tgt">~ 2026.12.31</b> · 신청 불요 · 기존 고객과 신규 고객 모두 대상.<br><b>유관기관제비용은 고객 부담</b>이라고 명시돼 있어 실제로는 ETF 0.0042087% / 리츠 0.0036396%가 나갑니다.' },
+  kb:      { state:'ok', acct:'비대면', raw:'0%', sub:'증권사 위탁수수료 면제',
+             misc:'sep', effLo:0.0050483, effHi:0.0050483, apply:'auto',
+             cond:'<b class="tgt">「2026 온라인 ETF 혜택」 · 비대면 최초 1계좌 · 2026.1.1 ~ 12.31</b> · 신청 불요.<br>미적용 시 일반 구간별 요율(HTS 0.0778 ~ 0.1278% + 2,000원).<br>KB는 유관기관수수료를 ETF 0.0050483%로 공시합니다(거래소 원가보다 높으며 차액 구성은 미공시).' },
+  kiwoom:  { state:'ok', acct:'비대면', raw:'0%', sub:'이벤트 · 신청 필수',
+             misc:'sep', effLo:0.0042087, effHi:0.0042087, apply:'apply',
+             mustNote:'2026.9.30 신청 마감',
+             cond:'<b class="tgt">2026.7.1 ~ 9.30 신청분에 한해 1년간</b> ETF 매매수수료 전액 면제(유관기관제비용만 부담).<br><b>이벤트가 아닌 상시 요율은 확인하지 못했습니다.</b>' },
+  hana:    { state:'warn', acct:'—', raw:null, sub:null, misc:null, effLo:null, effHi:null, apply:null,
+             ref:'일반계좌 <b>0.0141639%</b> 준용 추정',
+             cond:'<b>연금저축 전용 수수료표가 공식 안내에 없습니다.</b><br>ETF를 매매하려면 별도 「매매약정 신청」이 필요하다는 안내만 확인했습니다.' },
+  shinhan: { state:'warn', acct:'—', raw:null, sub:null, misc:null, effLo:null, effHi:null, apply:null,
+             ref:'ETF 기준 MTS <b>0.189733%</b><br>HTS 0.08973 ~ 0.49973% 준용 추정',
+             cond:'공식 안내에 <b>"상품별 수수료 적용"</b>이라고만 적혀 있어 전용 요율을 확인하지 못했습니다.<br>다만 <b>연금저축 안내 페이지가 공용 「수수료 안내」를 링크</b>하고 있고, 그 수수료 안내는 "아래 계좌는 <b>별도의 수수료 체계</b>를 적용 받으니 계좌별 상세 내용을 확인해 주세요"라며 <b>신한 SOL LINK와 S-Lite/S-Lite+만 열거</b>합니다. 연금저축은 그 목록에 없어 표준 요율을 따르는 것으로 보입니다.<br>사실이라면 같은 회사 ISA(이벤트 신청 시 0.0042087%)와 <b>45배 차이</b>가 납니다. 반드시 직접 확인하세요.' },
+  daishin: { state:'warn', acct:'—', raw:null, sub:null, misc:null, effLo:null, effHi:null, apply:null,
+             ref:'크레온 <b>0.015%</b> 준용 추정',
+             cond:'<b>연금저축 전용 수수료표를 찾지 못했습니다.</b><br>퇴직연금 수수료 공지는 DB·DC·IRP만 다룹니다.' },
+  eugene:  { state:'ok', acct:'구간별', raw:'0.13 ~ 0.15%', sub:'스마트폰 기준 · HTS 0.08 ~ 0.18%',
+             misc:'warn', effLo:0.13, effHi:0.1536396, apply:'auto', tier:true,
+             cond:'<b>"매체별 수수료율 적용 · 종합계좌 수수료율과 동일"</b>이라고 공식 명시돼 있습니다.<br>대상 상품에서 <b>파생상품 ETF(레버리지·인버스) 제외</b>도 명시돼 있습니다.' },
+  toss:    { state:'ok', acct:'모바일 전용', raw:'0.015%', sub:'NXT 0.014%',
+             misc:'sep', effLo:0.0186396, effHi:0.0186396, apply:'auto',
+             cond:'<b>2026년 7월 출시.</b> 계좌관리수수료는 없고 국내주식 거래수수료가 그대로 붙습니다.<br>국내상장 ETF만 가능(인버스·레버리지 제외)하며, <b>금융기관 간 계좌이체·ISA 만기전환금 입금은 아직 제공되지 않습니다.</b>' },
+  kakaopay:{ state:'warn', acct:'—', raw:null, sub:null, misc:null, effLo:null, effHi:null, apply:null,
+             ref:'표준수수료 <b>0.015%</b> 준용 추정',
+             cond:'연금저축 전용 수수료표가 없고 <b>계좌 구분 없는 표준수수료(0.015%)만</b> 공시돼 있습니다.<br>수수료표 자체가 「Retail부문 표준수수료」 하나뿐이고 <b>계좌 유형별 예외를 두지 않아</b>, 연금저축도 같은 요율일 가능성이 높습니다.<br>계좌 수수료(사업비)와 중도해지 수수료는 없다고 안내돼 있습니다.' }
+};
+
+// IRP — tiers: 적립금 구간별 운용관리(op)·자산관리(as) 수수료. as:null = 공시에서 확인 못 함
+// freeType: 'auto'(조건 없음) | 'apply'(비대면·온라인 개설) | 'check'(일부 부담금만) | 'warn'(범위 미확인)
+var IRP = {
+  mirae:   { avail:true, freeType:'apply', freeLabel:'비대면면제',
+             tiers:[{lab:'1억원 미만',op:0.20,as:0.10},{lab:'1억 ~ 3억원',op:0.18,as:0.10},{lab:'3억원 이상',op:0.15,as:0.10}],
+             free:'<b>개인부담금(내가 넣은 돈)</b>은 전자매체(온라인웹·모바일)를 통해 개설하면 운용·자산관리수수료가 <b>면제</b>됩니다. 앱으로 열었으면 이 조건은 이미 충족입니다.<br><b>퇴직금 이전분까지 면제</b>받으려면 두 요건을 모두 충족해야 합니다 — ① 전자매체로 계좌관리점을 <b>다이렉트</b>로 선택 ② 전자매체만을 통해 적립금을 스스로 운용하고 직접 거래.<br>⚠️ 관리점 변경 신청으로 다이렉트가 된 경우, <b>변경일 전까지 발생한 수수료는 그대로 징수</b>됩니다.<br>그 외 <b>만 34세 이하 운용관리수수료 면제</b>, 로보어드바이저 투자일임 운용분 운용관리수수료 면제, 장기보유 할인(2~4년차 10% ~ 11년차 15%), 연금수령개시자 20% 할인. (2026.1.12 시행)',
+             trade:'다이렉트 0.014% (일반 위탁 요율 준용 추정)' },
+  kis:     { avail:true, freeType:'apply', freeLabel:'비대면면제',
+             tiers:[{lab:'1.5억원 이하',op:0.15,as:0.10},{lab:'1.5억원 초과',op:0.10,as:0.10}],
+             free:'<b>비대면(인터넷·앱)으로 개설하면 운용·자산관리수수료 전액 면제.</b><br>사전지정운용(디폴트옵션) 가입자는 기본 0.13% / 0.08% + 손익수수료 0.02% 구조가 따로 적용됩니다.',
+             trade:null },
+  namuh:   { avail:true, freeType:'auto', freeLabel:'전면면제',
+             tiers:[{lab:'전 구간',op:0.00,as:0.00}],
+             free:'<b>조건 없음</b> — "가입자가 부담하는 운용/자산관리수수료는 발생하지 않습니다"(IRP-나무).<br>다만 가입 상품별 보수(ETF 총보수 등)는 별도로 발생합니다.',
+             trade:'확인필요 — 안내 페이지 안에서 표기가 엇갈립니다' },
+  samsung: { avail:true, freeType:'check', freeLabel:'부분면제',
+             tiers:[{lab:'1억원 미만',op:0.18,as:0.12},{lab:'1억 ~ 3억원',op:0.17,as:0.11},{lab:'3억원 이상',op:0.14,as:0.10}],
+             free:'<b>개인부담금(내가 직접 넣은 돈)은 전액 면제</b>됩니다 — 적립금 중 개인납입 비중만큼 자동 면제.<br>따라서 위 요율은 사실상 <b>회사에서 옮겨온 퇴직급여</b>에 붙는 값입니다.<br>별도 상품인 다이렉트IRP는 운용·자산관리수수료 자체가 없습니다. (2026.6.5 시행 공시)',
+             trade:'확인필요 — 현재 유효한 공시를 찾지 못했습니다' },
+  kb:      { avail:true, freeType:'apply', freeLabel:'비대면면제',
+             tiers:[{lab:'1.5억원 이하',op:0.10,as:0.15},{lab:'1.5억원 초과',op:0.10,as:0.10}],
+             free:'<b>온라인으로 개설하면 전액 면제.</b><br><b>개인부담금은 채널과 무관하게 항상 면제</b>되고, 회사에서 이전해온 퇴직금은 대면 개설 시 조건부 면제(50% 이상 투자, 만 34세 이하 등)입니다.',
+             trade:'확인필요' },
+  kiwoom:  { avail:true, freeType:'auto', freeLabel:'전면면제',
+             tiers:[{lab:'전 구간',op:0.10,as:null}],
+             free:'<b>가입 후 1년간 조건 없이 전면 면제</b> — 2026년 6월 1일 사업을 개시한 신규 사업자입니다.<br>이후 운용관리 0.10%이며, 수익률이 예금금리 평균의 120% 이하면 성과수수료가 면제됩니다.<br>개인형IRP에는 자산관리수수료를 부과하지 않는 것으로 공시돼 있습니다.',
+             trade:'확인필요' },
+  hana:    { avail:true, freeType:'apply', freeLabel:'비대면면제',
+             tiers:[{lab:'1억원 이하',op:0.15,as:0.15},{lab:'1억원 초과',op:0.15,as:0.10}],
+             free:'공시에 두 조항이 <b>별개로</b> 명시돼 있습니다.<br>① "개인형 IRP 중 <b>개인부담금 납입 평잔금액</b>에 대해서는 운용관리·자산관리수수료 <b>면제</b>"<br>② "개인형 IRP 중 <b>비대면채널(온라인웹 또는 모바일)을 통해 회사와 계약을 체결</b>하는 경우 운용관리·자산관리수수료 <b>면제</b>"<br>즉 앱·웹으로 열었으면 <b>퇴직금 이전분까지</b> 면제입니다.<br>표의 요율은 연금전환 이전 기준이며, 장기계약할인은 2~4년차 10% · 5~10년차 15% · 11년차 이후 20%입니다.',
+             trade:'확인필요' },
+  shinhan: { avail:true, freeType:'auto', freeLabel:'전면면제',
+             tiers:[{lab:'전 구간',op:0.00,as:0.00}],
+             free:'<b>조건 없음 · 전 채널 · 전 적립금 규모</b> — 2024년 4월 1일부터 개인형IRP 운용관리·자산관리수수료를 전면 면제하고 있습니다.',
+             trade:'확인필요' },
+  daishin: { avail:true, freeType:'apply', freeLabel:'비대면면제',
+             tiers:[{lab:'1.5억원 이하',op:0.15,as:null},{lab:'1.5억 ~ 10억원',op:0.10,as:0.10},{lab:'10억원 초과',op:0.05,as:0.05}],
+             free:'<b>크레온IRP(온라인 채널)는 운용·자산관리수수료 전액 무료.</b><br>대신증권 DB·DC 가입자가 퇴직금을 IRP로 입금하면 18개월간 운용관리수수료가 면제됩니다.<br>1.5억원 이하 구간의 자산관리수수료는 공시에서 확인하지 못했습니다. (2021.7.7 시행, 이후 변동 없음 표기)',
+             trade:'확인필요' },
+  meritz:  { avail:false, why:'퇴직연금사업자 미등록' },
+  eugene:  { avail:false, why:'퇴직연금사업자 미등록' },
+  toss:    { avail:false, why:'퇴직연금사업자 미등록' },
+  kakaopay:{ avail:false, why:'퇴직연금사업자 미등록' }
+};
+
+var LINKS = {
+  mirae: [
+    {t:'다이렉트 중개형ISA', u:'https://digital.securities.miraeasset.com/ISA/'},
+    {t:'다이렉트 연금저축', u:'https://digital.securities.miraeasset.com/personal-pension/'},
+    {t:'퇴직연금 수수료 공시', u:'https://securities.miraeasset.com/hkp/hkp2007/n11.do'}
+  ],
+  kis: [
+    {t:'위탁수수료 안내', u:'https://securities.koreainvestment.com/main/customer/guide/_static/TF04ae010000.jsp'},
+    {t:'연금저축 안내', u:'https://securities.koreainvestment.com/pension/nwInvestment/PersonalPensionGuid.jsp'},
+    {t:'퇴직연금 수수료 공시(개인형IRP)', u:'https://securities.koreainvestment.com/pension/nwEtcinfo/_static/BizNotice_A_NW_3291004.jsp'}
+  ],
+  namuh: [
+    {t:'나무 중개형ISA', u:'https://www.mynamuhbegin.com/isa'},
+    {t:'나무 IRP', u:'https://www.mynamuhbegin.com/irp'},
+    {t:'나무 수수료 안내', u:'https://m.mynamuh.com/static/MTXSI0171'}
+  ],
+  meritz: [
+    {t:'매매수수료·세금 안내(모바일)', u:'https://home.imeritz.com/mobile/content/feeinfo/tax.html'},
+    {t:'ISA·연금저축 안내', u:'https://home.imeritz.com/mobile/content/wrap_isa_pension/inter_guide.html'}
+  ],
+  samsung: [
+    {t:'중개형ISA 안내', u:'https://www.samsungpop.com/mbw/finance/isa.do?cmd=guide'},
+    {t:'업무·상품 수수료 안내', u:'https://www.samsungpop.com/ux/kor/customer/guide/workproductguide/commission.do'},
+    {t:'퇴직연금 수수료 공시', u:'https://www.samsungpop.com/ux/kor/pension/center/public/commission.pop?tabIndex=2'}
+  ],
+  kb: [
+    {t:'중개형ISA 알아보기', u:'https://www.kbsec.com/go.able?linkcd=m05080009'},
+    {t:'2026 연금저축 온라인 ETF 혜택 공지', u:'https://etcimg.kbsec.com/html/design/20251226104205/notice.html'},
+    {t:'퇴직연금 수수료 공시(PDF)', u:'https://fdata.kbsec.com/agree/notice69.pdf'}
+  ],
+  kiwoom: [
+    {t:'중개형ISA 수수료 안내', u:'https://www.kiwoom.com/h/help/ftrade/VHelpInvstIsaInfoView'},
+    {t:'퇴직연금 안내', u:'https://www.kiwoom.com/wm/rtp/bdc/rf010/bdcRfMainView'}
+  ],
+  hana: [
+    {t:'수수료 안내(현행)', u:'https://www.hanaw.com/main/customer/cm/CS_060200_T2.jsp'},
+    {t:'퇴직연금 수수료 공시', u:'https://www.hanaw.com/main/pension/announce/announce/RP_060100_P.cmd'}
+  ],
+  shinhan: [
+    {t:'2026년 ISA 수수료 이벤트', u:'https://www.shinhansec.com/cms/contents/event/260102_ISACharge_pc.html'},
+    {t:'수수료 안내', u:'https://www.shinhansec.com/siw/customer-center/guide/business_guide_charge_tab1/contents.do'},
+    {t:'퇴직연금 제도 안내·수수료', u:'https://www.shinhansec.com/siw/rks/systemGuidance/610403/view.do?tab=4'}
+  ],
+  daishin: [
+    {t:'온라인 수수료 안내', u:'https://money2.daishin.com/E5/WTS/Customer/Guide/DM_Charge_Cyber.aspx'},
+    {t:'중개형ISA 수수료 평생우대', u:'https://www.daishin.com/content/w/customer/event/eventDetail.ds?m=&p=12933&v=12835&cid=5193'},
+    {t:'퇴직연금 수수료체계 공지', u:'https://money2.daishin.com/html/Notice/2023/n_148.html'}
+  ],
+  eugene: [
+    {t:'수수료 안내', u:'https://www.eugenefn.com/serv/svwc/getSvwc400p.do?svwcHeader=400&svwcLeft=411'},
+    {t:'연금저축계좌 안내', u:'https://www.eugenefn.com/ingo/igtf/igtf500r.do'}
+  ],
+  toss: [
+    {t:'연금저축계좌 핵심설명서(PDF)', u:'https://home-files.tossinvest.com/files/notice/29007c66-9ee5-4964-b6d3-77680994d4a5.pdf'}
+  ],
+  kakaopay: [
+    {t:'수수료 안내', u:'https://www.kakaopaysec.com/guide/feeGuide/dynamicPage.do'},
+    {t:'중개형ISA 핵심설명서(PDF)', u:'https://www.kakaopaysec.com/downloadFile.do?id=10410'}
+  ]
+};
+
+// 계좌별 세제 — 2026.08.20 시행 법령 기준
+var TAX = [
+  { k:'세제 혜택',
+    isa:'<b>비과세</b> 일반형 200만원 / 서민형·농어민형 400만원<br>초과분은 <b>9.9% 분리과세</b>',
+    pen:'<b>세액공제</b> 연 600만원',
+    irp:'연금저축과 <b>합산 연 900만원</b> 세액공제' },
+  { k:'세액공제율',
+    isa:'—',
+    pen:'총급여 5,500만원 이하 <b>16.5%</b><br>초과 <b>13.2%</b> (지방소득세 포함)',
+    irp:'연금저축과 동일' },
+  { k:'연 납입한도',
+    isa:'<b>2,000만원</b> (미불입분 이월 가능)',
+    pen:'연금저축 + IRP <b>합산 1,800만원</b>',
+    irp:'연금저축과 합산' },
+  { k:'총 납입한도',
+    isa:'<b>1억원</b>', pen:'없음', irp:'없음' },
+  { k:'의무 기간',
+    isa:'<b>3년</b> 의무가입',
+    pen:'가입 <b>5년</b> 경과 + 만 <b>55세</b> 이후 수령',
+    irp:'연금저축과 동일' },
+  { k:'가입 자격',
+    isa:'만 19세 이상 거주자(근로소득자는 만 15세 이상)<br><b>직전 3년 중 금융소득종합과세 대상자였으면 가입 불가</b>',
+    pen:'제한 없음',
+    irp:'소득이 있는 취업자 · 퇴직급여 수령자' },
+  { k:'중도 인출',
+    isa:'납입원금 범위 내 자유롭게 가능',
+    pen:'<b>기타소득세 16.5%</b><br>(사망·해외이주 등 부득이한 사유는 연금소득세율)',
+    irp:'원칙적으로 불가 — 법정 사유만 허용' },
+  { k:'연금 수령 시 세율',
+    isa:'—',
+    pen:'55 ~ 69세 <b>5.5%</b> / 70 ~ 79세 <b>4.4%</b> / 80세 이상 <b>3.3%</b><br>종신형은 2026.1.1 수령분부터 <b>3.3%</b>(4.4%에서 인하)',
+    irp:'연금저축과 동일' },
+  { k:'연 1,500만원 초과 수령',
+    isa:'—',
+    pen:'<b>종합과세 또는 16.5% 분리과세</b> 중 선택<br>(사적연금 합산 기준, 2025.1.1부터 1,200 → 1,500만원 상향 시행)',
+    irp:'연금저축과 합산해서 판단' },
+  { k:'위험자산 한도',
+    isa:'제한 없음', pen:'제한 없음',
+    irp:'<b>70%</b> — 안전자산 30% 의무<br>(디폴트옵션 이용 시 100% 가능)' },
+  { k:'만기 후 연계',
+    isa:'만기 <b>60일 이내</b> 연금계좌로 전환하면<br>전환금액의 <b>10% · 최대 300만원</b> 추가 세액공제',
+    pen:'—', irp:'—' }
+];
+
+var PROD = [
+  { k:'국내상장 주식',            isa:'ok',   pen:'no',   irp:'no' },
+  { k:'국내상장 ETF (일반)',      isa:'ok',   pen:'ok',   irp:'ok', note:'IRP는 위험자산 70% 한도 안에서' },
+  { k:'레버리지 · 인버스 ETF',    isa:'ok',   pen:'no',   irp:'no' },
+  { k:'국내상장 해외지수 ETF',    isa:'ok',   pen:'ok',   irp:'ok', note:'S&P500 · 나스닥100 추종 등' },
+  { k:'해외주식 직접투자',        isa:'no',   pen:'no',   irp:'no' },
+  { k:'상장리츠 · 인프라펀드',    isa:'ok',   pen:'ok',   irp:'ok' },
+  { k:'펀드',                     isa:'ok',   pen:'ok',   irp:'ok' },
+  { k:'원리금보장상품 (예금·RP)', isa:'ok',   pen:'ok',   irp:'ok', note:'IRP 안전자산 30%를 채우는 용도' }
+];
+
+// IRP 면제 조건의 난이도 — 종합표에 어떤 값을 대표로 세울지 결정한다
+// true  = 조건이 쉬움(개설 채널만 맞추면 됨) → 대표값 0%, 표준 요율은 보조로
+// false = 조건이 까다롭거나 범위가 불명확  → 대표값 표준 요율, 0%는 보조로
+// 2026-08-20 각 사 퇴직연금 수수료 공시 원문 재확인 결과, 9개 취급사 전부 조건이 쉬운 것으로 확정됐다.
+var IRP_EASY = {
+  namuh:true, shinhan:true,   // 조건 자체가 없음
+  kiwoom:true,                // 조건 없음 (단 가입 후 1년 한정)
+  kis:true, kb:true, daishin:true, // 비대면·온라인 개설 하나면 됨
+  samsung:true,               // 개인부담금은 조건 없이 자동 면제
+  mirae:true,                 // 전자매체 개설이면 개인부담금 면제 (원문 재확인)
+  hana:true                   // 비대면채널 계약이면 면제 + 개인부담금은 항상 면제 (원문 재확인)
+};
+var IRP_SHORT = {
+  namuh:'조건 없이 전액 면제',
+  shinhan:'조건 없이 전액 면제',
+  kiwoom:'조건 없음 · <b>가입 후 1년</b> 한정',
+  kis:'<b>비대면 개설</b>이면 면제',
+  kb:'<b>온라인 개설</b>이면 면제',
+  daishin:'<b>크레온IRP(온라인)</b>면 무료',
+  samsung:'<b>개인부담금</b>만 면제<br>퇴직금 이전분엔 부과',
+  mirae:'<b>앱·웹 개설</b>이면 개인부담금 면제<br>다이렉트+직접운용이면 퇴직금분까지',
+  hana:'<b>비대면 계약</b>이면 면제'
+};
+var IRP_FALLBACK = {
+  namuh:'표준 요율 자체가 0%',
+  shinhan:'표준 요율 자체가 0%',
+  kiwoom:'<b>가입 1년 후</b> 운용관리 0.10%',
+  kis:'영업점 개설 시 0.20 ~ 0.25%',
+  kb:'대면 개설 시 0.20 ~ 0.25%',
+  daishin:'온라인이 아니면 0.10 ~ 0.20%',
+  samsung:'<b>퇴직금 이전분</b>엔 0.24 ~ 0.30%',
+  mirae:'<b>퇴직금 이전분</b>엔 0.25 ~ 0.30%',
+  hana:'영업점 계약 시 0.25 ~ 0.30%'
+};
+
+// 절세계좌 전용 이벤트 A — 수수료 우대
+// how: 'auto'(계좌 개설만 하면 적용) / 'apply'(별도 신청 필수) / 'cond'(추가 조건 필요) / 'warn'(판정 불가)
+var EV_FEE = [
+  { id:'samsung', acct:'ISA', title:'중개형ISA 「평생혜택」',
+    benefit:'국내주식 <b>0.0036396%</b> · ETF·ETN <b>0.0042087%</b><br><span class="mute">유관기관제비용 수준까지 인하</span>',
+    how:'auto', howNote:'안내 문구 — "계좌 개설 시 <b>평생혜택 수수료가 자동 적용</b>되며, 평생혜택 표기 계좌에서 온라인으로 거래할 때 제공됩니다"',
+    target:'개인 고객 · 법인·외국인·미성년자 제외', dur:'평생', period:'2026.1.1 ~ 12.31 <b>개설분</b>', state:'ok' },
+  { id:'daishin', acct:'ISA', title:'중개형ISA 수수료 평생우대',
+    benefit:'수수료 우대<br><span class="mute">할인 후 요율이 고지문에 <b>미기재</b> · 비할인 표준 0.196~0.197%</span>',
+    how:'auto', howNote:'안내 문구 — "중개형 ISA 계좌 개설 시 수수료 우대는 <b>자동 적용</b>되며"',
+    target:'2026.1.1 이후 신규 또는 <b>2025년 국내주식 무거래</b> 고객 · 사이보스·크레온 온라인 한정', dur:'평생', period:'2026.1.1 ~ 12.31', state:'ok' },
+  { id:'mirae', acct:'ISA', title:'다이렉트 중개형ISA 평생우대',
+    benefit:'<b>0.0036396%</b>',
+    how:'auto', howNote:'별도 신청 버튼 없이 <b>다이렉트(비대면) 계좌 유형에 귀속</b>됩니다. 계좌관리점을 영업점으로 바꾸면 우대가 사라진다는 안내가 있습니다.',
+    target:'다이렉트 계좌 개설 고객', dur:'평생', period:'2026.12.31 <b>개설분</b>까지', state:'ok' },
+  { id:'namuh', acct:'ISA', title:'나무 중개형ISA 수수료 우대',
+    benefit:'국내주식 <b>0.0043319%</b> · ETF·ETN <b>0.0049010%</b>',
+    how:'auto', howNote:'별도 신청 없이 적용됩니다. 다만 안내 화면에 명시 문구가 없어, <b>개설 전에 한 번 더 확인</b>하시기를 권합니다.',
+    target:'신규 개설 고객', dur:'<b>개설일부터 12개월</b> · 평생우대 아님', period:'2026.2.1 ~ 2027.1.31 <b>개설분</b>', state:'ok' },
+  { id:'shinhan', acct:'ISA', title:'2026년 국내주식 수수료 이벤트',
+    benefit:'<b>유관기관제비용만 부담</b><br>주식 0.0036396% · ETF 0.0042087%',
+    how:'apply', howNote:'안내 문구 — "참여방법: <b>이벤트 신청버튼 클릭</b>", "<b>신청 시점 이후</b> 신규 주문하여 체결된 거래부터 적용". 즉 계좌만 열고 신청을 안 하면 표준요율(MTS 0.188~0.189%)이 그대로 나갑니다.',
+    target:'비대면 고객', dur:'~ 2026.12.31', period:'2026.1.2 ~ 12.31 <b>신청분</b>', state:'ok' },
+  { id:'samsung', acct:'연금저축', title:'연금저축 온라인 거래수수료 무료',
+    benefit:'증권사 위탁수수료 <b>0원</b><br><span class="mute">유관기관제비용은 고객 부담(ETF 0.0042087%)</span>',
+    how:'auto', howNote:'별도 신청 없이 기존 고객·신규 고객 모두 적용됩니다.',
+    target:'전 고객', dur:'~ 2026.12.31', period:'~ 2026.12.31', state:'ok' },
+  { id:'mirae', acct:'연금저축', title:'다이렉트 연금저축 ETF·리츠 수수료 우대',
+    benefit:'<b>0.0036396%</b><br><span class="mute">대상 상품 ETF·리츠만</span>',
+    how:'warn', howNote:'고지문에 "다이렉트 계좌에 한합니다"라고만 적혀 있고 <b>자동인지 신청인지 문구가 없습니다.</b> 같은 페이지의 입금 리워드 이벤트에는 신청 버튼이 있는 것과 대조적이라 계좌 유형에 귀속되는 것으로 보이지만, <b>단정하지 않겠습니다.</b>',
+    target:'다이렉트 계좌', dur:'~ 2026.12.31', period:'~ 2026.12.31', state:'warn' },
+  { id:'kb', acct:'연금저축', title:'2026 온라인 ETF 혜택',
+    benefit:'ETF 매매수수료 <b>0.0050483%</b><br><span class="mute">KB 공시 유관기관수수료 수준</span>',
+    how:'auto', howNote:'신청 불요로 확인했습니다. <b>비대면 최초 1계좌</b>에만 적용됩니다.',
+    target:'비대면 최초 1계좌', dur:'~ 2026.12.31', period:'2026.1.1 ~ 12.31', state:'ok' },
+  { id:'kiwoom', acct:'연금저축', title:'연금저축 ETF 수수료 면제',
+    benefit:'ETF 매매수수료 <b>전액 면제</b> 1년<br><span class="mute">유관기관제비용만 부담</span>',
+    how:'apply', howNote:'안내 문구 — "이벤트에 참여하려면 키움증권 홈페이지에서 <b>이벤트 신청을 완료해야</b> 합니다", "이벤트 철회 시 수수료 할인 자동 취소". <b>9월 30일이 신청 마감</b>이라 놓치면 다음 회차를 기다려야 합니다.',
+    target:'신청 고객', dur:'신청일부터 <b>1년</b>', period:'2026.7.1 ~ <b>9.30 신청 마감</b>', state:'ok' },
+  { id:'shinhan', acct:'IRP', title:'IRP 수수료 무료',
+    benefit:'운용관리 · 자산관리수수료 <b>연 0%</b>',
+    how:'auto', howNote:'대면·비대면, 적립금 규모와 무관하게 조건 없이 적용됩니다(2024.4.1~). 별도 신청 절차 문구가 없습니다.',
+    target:'개인 고객 누구나', dur:'조건 없음', period:'2024.4.1 ~ 상시', state:'ok' },
+  { id:'kiwoom', acct:'IRP', title:'IRP 관리수수료 면제 (사업 개시 기념)',
+    benefit:'운용관리 · 자산관리수수료 <b>연 0%</b><br><span class="mute">이후 운용관리 0.10%</span>',
+    how:'auto', howNote:'2026년 6월 1일 사업을 개시한 신규 사업자입니다. "조건 없이 전면 면제"로 알려져 있으나 <b>공식 고지문에서는 확인하지 못했습니다.</b>',
+    target:'가입 고객', dur:'<b>가입 후 1년</b>', period:'2026.6.1 사업 개시', state:'warn' }
+];
+
+// 절세계좌 전용 이벤트 B — 현금·상품권 리워드 (2026-08-20 조회 시점 · 수시 변경)
+var EV_REWARD = [
+  { id:'mirae', acct:'연금저축·IRP', reward:'상품권 <b>최대 100만원</b>', how:'apply',
+    cond:'타사 이전 · ISA 만기전환 순입금 구간별 차등(이전분 1.5배 인정) · 지급 시점까지 계좌 유지 필요<br><b>분기별로 따로 신청</b>해야 합니다.',
+    period:'2026.1.1 ~ 12.31 (분기별 정산)', state:'ok' },
+  { id:'mirae', acct:'연금저축·IRP', reward:'상품권 <b>최대 3만원</b>', how:'apply',
+    cond:'퇴직금 입금액 구간(1천만~3천만 / 3천만원 이상) · 고지문에 "<b>이벤트 신청 필수, 분기별 1회</b>" 명시',
+    period:'2026.1.1 ~ 12.31', state:'ok' },
+  { id:'kiwoom', acct:'연금저축', reward:'<b>최대 568만원</b> + 추첨 현금 최대 50만원', how:'apply',
+    cond:'신규·타사이전·ISA전환·순입금·ETF 거래 등 유형별 복합 · <b>신청 필수</b>',
+    period:'2026.7.1 ~ <b>9.30</b>', state:'ok' },
+  { id:'kiwoom', acct:'ISA', reward:'<b>최대 501.5만원</b><br><span class="mute">투자지원금 1.5만원 + 순입금 리워드</span>', how:'cond',
+    cond:'신규 개설 · 타사 이전 · 만기 재가입 유형별 차등<br>신청 필요 여부는 확인하지 못했습니다.',
+    period:'~ <b>2026.9월말</b> (혜자 이벤트 시즌2)', state:'warn' },
+  { id:'shinhan', acct:'IRP', reward:'신세계백화점 상품권 <b>최대 3만원</b>', how:'cond',
+    cond:'신규 개설 1만원 + 입금·이전 금액 구간별(100만 ~ 900만원 이상) · SOL증권·슈퍼SOL 앱에서 참여<br>"신청 필수" 명문은 확인하지 못했습니다.',
+    period:'2026.7.1 ~ <b>9.30</b>', state:'warn' },
+  { id:'namuh', acct:'IRP', reward:'배달의민족 상품권 <b>최대 3만원</b>', how:'cond',
+    cond:'순입금 100만원 이상 구간별 · 타사 이전은 2배 인정 · 마케팅 동의 유지 필요',
+    period:'~ <b>2026.8.31</b> · 종료 임박', state:'warn' },
+  { id:'kb', acct:'ISA', reward:'백화점상품권<br><span class="mute">최초 개설 100만원 이상 시 네이버페이·올리브영·배민 중 1만원</span>', how:'cond',
+    cond:'순입금 200만원 이상 구간별 · 타사 이전은 2배 인정',
+    period:'~ <b>2026.8.31</b> · 순입금 이벤트 시즌3', state:'warn' },
+  { id:'hana', acct:'IRP', reward:'신세계 모바일상품권 <b>최대 3만원</b>', how:'cond',
+    cond:'신규 10만원 이상 입금 시 1만원 + 순증(타사 이전·ISA 만기전환) 최대 3만원',
+    period:'2026.7.1 ~ 12.31', state:'ok' },
+  { id:'hana', acct:'연금저축', reward:'순증 리워드 <span class="chip chip-warn">금액 확인필요</span>', how:'cond',
+    cond:'개인연금 순증 이벤트로 목록에는 있으나 <b>금액·조건 상세를 확인하지 못했습니다.</b>',
+    period:'2026.7.1 ~ 12.31', state:'warn' },
+  { id:'eugene', acct:'ISA', reward:'<b>최대 11만원</b><br><span class="mute">「중개형ISA는 ETF가 제철」</span>', how:'cond',
+    cond:'조건 충족 시 지급 · 세부 조건은 확인하지 못했습니다.',
+    period:'2026.7.1 ~ <b>9.30</b>', state:'warn' },
+  { id:'samsung', acct:'ISA·연금저축·IRP', reward:'이마트·GS칼텍스·신세계 모바일상품권', how:'apply',
+    cond:'순입금 구간별(신규·복귀·타사이전 상이) · 고지문에 "<b>이벤트 신청과 마케팅 정보 수신 동의가 필요</b>" 명시<br><b>5~7월분은 이미 종료</b>됐고, 후속 「연금저축 Jump-Up」(~10.31)이 진행 중이라는 정황은 있으나 상세를 확인하지 못했습니다.',
+    period:'2026.5.1 ~ <b>7.31 종료</b> · 후속 회차 확인필요', state:'warn' },
+  { id:'kis', acct:'ISA·IRP', reward:'<span class="chip chip-warn">확인필요</span><br><span class="mute">검색에는 「뱅키스 ISA중개형 순입금 신세계상품권 최대 50만원」·「IRP 관리수수료 우대」가 노출</span>', how:'warn',
+    cond:'공식 안내에서 <b>실제 진행 여부와 조건을 확인하지 못했습니다.</b> 개설 전 앱에서 직접 확인하세요.',
+    period:'확인필요', state:'warn' }
+];
+
+// 확인하지 못한 항목 — 고객센터에 그대로 읽어서 물어볼 문장
+var ASK = [
+  { id:'hana', tel:'1588-3111', what:'ISA·연금저축 매매수수료',
+    q:'중개형ISA 계좌와 연금저축계좌에서 온라인으로 국내주식·ETF를 매매할 때 적용되는 매매수수료율이 몇 %인가요? 일반 비대면 계좌(L등급 0.0141639%)와 다른가요?' },
+  { id:'meritz', tel:'1588-3400', what:'0.009%의 유관기관제비용 포함 여부',
+    q:'중개형ISA·연금저축 계좌의 국내주식·ETF 온라인 매매수수료 0.009%에 유관기관제비용(한국거래소 0.0036396%, ETF 0.0042087%)이 포함되어 있나요, 별도로 추가 부과되나요?' },
+  { id:'namuh', tel:'1544-0000', what:'연금저축 ETF 매매수수료',
+    q:'연금저축계좌에서 국내상장 ETF를 온라인으로 매매할 때 적용되는 수수료율이 몇 %인가요? 유관기관제비용은 포함인가요, 별도인가요?' },
+  { id:'shinhan', tel:'1588-0365', what:'연금저축 ETF 매매수수료',
+    q:'연금저축계좌에서 국내상장 ETF를 온라인으로 매매할 때 적용되는 수수료율이 몇 %인가요? 공식 안내에는 "상품별 수수료 적용"이라고만 되어 있어서요.' },
+  { id:'daishin', tel:'1588-4488', what:'ISA 평생우대 할인 후 요율 · 연금저축 수수료',
+    q:'중개형ISA 신규 개설 시 자동 적용되는 수수료 평생우대의 할인 후 온라인 매매수수료율이 몇 %인가요? 표준 요율 0.196~0.197% 대비 얼마나 낮아지나요?' },
+  { id:'kakaopay', tel:'1600-8515', what:'연금저축 수수료 · 유관기관제비용 포함 여부',
+    q:'연금저축계좌의 국내상장 ETF 온라인 매매수수료가 표준수수료 0.015%와 같은가요? 그리고 이 0.015%에 유관기관제비용이 포함되어 있나요?' },
+  { id:'kb', tel:'1588-6611', what:'ISA 전용 우대 유무',
+    q:'중개형ISA를 신규 개설하면 ISA 전용 우대 요율이 적용되나요, 아니면 일반 비대면 계좌와 같은 HTS 0.015% · 모바일 0.12%가 적용되나요?' },
+  { id:'eugene', tel:'1588-6300', what:'유관기관제비용 포함 여부',
+    q:'중개형ISA·연금저축 계좌의 국내주식·ETF 온라인 매매수수료에 유관기관제비용이 포함되어 있나요, 별도로 추가 청구되나요?' },
+  { id:'mirae', tel:'1588-6800', what:'연금저축 우대의 신청 필요 여부',
+    q:'다이렉트 연금저축계좌의 ETF·리츠 수수료 우대(0.0036396%)는 계좌를 열면 자동으로 적용되나요, 아니면 따로 신청해야 하나요?' }
+];
+
+// IRP ETF 매매수수료는 9개 취급사 중 삼성 외에는 공시 자체가 없어 공통 질문으로 묶는다
+var ASK_COMMON = 'IRP 계좌에서 국내상장 ETF를 매매할 때 건별로 부과되는 매매수수료율이 몇 %인가요? 운용관리·자산관리수수료와는 별개로 나가나요?';
+
+// ============================================================
+// 렌더링
+// ============================================================
+function fmtPct(v, digits){
+  if (v === null || v === undefined) return '–';
+  var s = v.toFixed(digits === undefined ? 7 : digits);
+  s = s.replace(/0+$/, '').replace(/\.$/, '');
+  return s + '%';
+}
+function fmtWon(v){ return Math.round(v).toLocaleString('ko-KR') + '원'; }
+function miscChip(m){
+  if (m === 'inc')  return '<span class="chip chip-inc">포함</span>';
+  if (m === 'inc*') return '<span class="chip chip-inc">포함</span><div class="sub2">정황 판단</div>';
+  if (m === 'sep')  return '<span class="chip chip-sep">별도</span>';
+  if (m === 'warn') return '<span class="chip chip-warn">확인필요</span>';
+  return '<span class="mute">–</span>';
+}
+// tone: 'a'=중개형ISA(오렌지) / 'b'=연금저축(브라운) / 'g'=IRP(그린)
+function effCell(d, tone){
+  var t = tone || 'a';
+  if (d.state === 'none') return '<span class="na">–</span>';
+  // 전용 요율을 확인 못 했으면 일반 위탁계좌 요율을 참고값으로만 병기한다(순위에서는 제외).
+  if (d.effLo === null) return '<span class="chip chip-warn">확인필요</span>' + (d.ref ? '<div class="sub2">' + d.ref + '</div>' : '');
+  if (d.effLo !== d.effHi) {
+    return '<div class="big ' + t + '">' + fmtPct(d.effLo) + '</div><div class="sub2">~ ' + fmtPct(d.effHi) + ' (' + (d.effNote || '포함 여부 미확인') + ')</div>';
+  }
+  return '<div class="big ' + t + '">' + fmtPct(d.effLo) + '</div>';
+}
+function brokerCell(id){
+  var s = SIZE[id];
+  return '<div class="bname">' + NAME[id] + '</div>' +
+         '<div class="bsize"><span class="bsize-rank">규모 <b>' + s.rank + '위</b></span>' +
+         '<div class="bsize-amt">자기자본 ' + s.eq.toFixed(2) + '조원</div></div>';
+}
+// IRP 표준 합계(최저 적립금 구간) — 정렬·요약용
+function irpStdSum(id){
+  var d = IRP[id];
+  if (!d || !d.avail) return null;
+  var t = d.tiers[0];
+  return Math.round(((t.op || 0) + (t.as || 0)) * 10000) / 10000;
+}
+function irpSumLabel(t){
+  if (t.as === null) return fmtPct(t.op, 2) + ' + 확인필요';
+  return fmtPct((t.op || 0) + (t.as || 0), 2);
+}
+// 종합표에 세울 대표값 — 조건이 쉬우면 0%, 까다로우면 표준 요율
+function irpRepr(id){
+  var d = IRP[id];
+  if (!d || !d.avail) return null;
+  return IRP_EASY[id] ? 0 : irpStdSum(id);
+}
+
+// ---------- 종합표 ----------
+var sortKey = 'size', sortAsc = true;
+function renderMaster(){
+  var ids = ORDER.slice();
+  ids.sort(function(a, b){
+    if (sortKey === 'size') return sortAsc ? SIZE[a].rank - SIZE[b].rank : SIZE[b].rank - SIZE[a].rank;
+    if (sortKey === 'name') return sortAsc ? NAME[a].localeCompare(NAME[b], 'ko') : NAME[b].localeCompare(NAME[a], 'ko');
+    var va, vb;
+    if (sortKey === 'isa') { va = ISA[a].effHi; vb = ISA[b].effHi; }
+    else if (sortKey === 'pen') { va = PEN[a].effHi; vb = PEN[b].effHi; }
+    else { va = irpRepr(a); vb = irpRepr(b); }
+    var na = (va === null || va === undefined), nb = (vb === null || vb === undefined);
+    if (na && nb) return SIZE[a].rank - SIZE[b].rank;
+    if (na) return 1;
+    if (nb) return -1;
+    if (va === vb) {
+      // 대표값이 같으면(대부분 0%) 조건 미충족 시의 표준 요율로 갈라준다
+      if (sortKey === 'irp') {
+        var sa = irpStdSum(a), sb = irpStdSum(b);
+        if (sa !== sb) return sortAsc ? sa - sb : sb - sa;
+      }
+      return SIZE[a].rank - SIZE[b].rank;
+    }
+    return sortAsc ? va - vb : vb - va;
+  });
+
+  var html = '';
+  ids.forEach(function(id, i){
+    var isa = ISA[id], pen = PEN[id], irp = IRP[id];
+    var isaC, penC, irpC, freeC;
+
+    // 신청해야만 받는 요율은 종합표에서도 반드시 표시한다. 숫자만 보면 오해한다.
+    function mustTag(d){
+      if (d.apply !== 'apply') return '';
+      return '<div class="sub2"><span class="chip chip-must">신청 필수</span></div>' +
+             (d.mustNote ? '<div class="must-note">' + d.mustNote + '</div>' : '');
+    }
+    if (isa.state === 'none') isaC = '<span class="chip chip-none">미취급</span>';
+    else isaC = effCell(isa, 'a') + (isa.tier ? '<div class="sub2"><span class="chip chip-tier">구간별</span></div>' : '') + mustTag(isa);
+
+    penC = effCell(pen, 'b') + (pen.tier ? '<div class="sub2"><span class="chip chip-tier">구간별</span></div>' : '') + mustTag(pen);
+
+    if (!irp.avail) {
+      irpC = '<span class="chip chip-none">미취급</span>';
+      freeC = '<span class="mute" style="font-size:11.5px">' + irp.why + '</span>';
+    } else {
+      var t0 = irp.tiers[0];
+      if (IRP_EASY[id]) {
+        // 조건이 쉬우니 실제로 내는 값(0%)을 대표로 세운다
+        irpC = '<div class="big g">0%</div>' +
+               '<div class="sub2">' + (IRP_FALLBACK[id] || '') + '</div>';
+      } else {
+        // 조건이 까다롭거나 불명확하니 표준 요율을 대표로 세운다
+        irpC = '<div class="big a">' + irpSumLabel(t0) + '</div>' +
+               '<div class="sub2">조건 충족 시 <b>0%</b></div>' +
+               (irp.tiers.length > 1 ? '<div class="sub2">최저 구간 기준 · 구간 ' + irp.tiers.length + '개</div>' : '');
+      }
+      var chipCls = irp.freeType === 'auto' ? 'chip-auto' : (irp.freeType === 'warn' ? 'chip-warn' : (irp.freeType === 'check' ? 'chip-check' : 'chip-apply'));
+      freeC = '<span class="chip ' + chipCls + '">' + irp.freeLabel + '</span><div class="cond2">' + (IRP_SHORT[id] || '') + '</div>';
+    }
+
+    html += '<tr data-broker="' + NAME[id] + '">' +
+      '<td class="rank">' + (i + 1) + '</td>' +
+      '<td class="l">' + brokerCell(id) + '</td>' +
+      '<td class="c-isa bl">' + isaC + '</td>' +
+      '<td class="c-pen">' + penC + '</td>' +
+      '<td class="c-irp bl">' + irpC + '</td>' +
+      '<td class="c-irp">' + freeC + '</td>' +
+      '</tr>';
+  });
+  document.getElementById('tb-master').innerHTML = html;
+  applyFilter();
+}
+
+// ---------- ISA / 연금저축 상세 ----------
+function renderDetail(data, tbodyId, tone){
+  var html = '';
+  ORDER.forEach(function(id){
+    var d = data[id];
+    var raw = d.state === 'none' ? '<span class="chip chip-none">미취급</span>'
+            : (d.raw === null ? '<span class="chip chip-warn">확인필요</span>'
+            : '<div class="big">' + d.raw + '</div>' + (d.sub ? '<div class="sub2">' + d.sub + '</div>' : ''));
+    var ap = d.apply === 'apply' ? '<div class="sub2"><span class="chip chip-must">신청 필수</span></div>'
+           : d.apply === 'auto' ? '<div class="sub2"><span class="chip chip-auto">자동</span></div>' : '';
+    html += '<tr data-broker="' + NAME[id] + '">' +
+      '<td class="l">' + brokerCell(id) + '</td>' +
+      '<td class="l"><b>' + (d.acct || '—') + '</b>' + ap + '</td>' +
+      '<td>' + raw + '</td>' +
+      '<td>' + (d.state === 'none' ? '<span class="mute">–</span>' : miscChip(d.misc)) + '</td>' +
+      '<td class="' + (tone === 'b' ? 'c-pen' : 'c-isa') + '">' + effCell(d, tone) + '</td>' +
+      '<td class="l"><div class="cond2">' + d.cond + '</div></td>' +
+      '</tr>';
+  });
+  document.getElementById(tbodyId).innerHTML = html;
+}
+
+// ---------- IRP 관리수수료 ----------
+function renderIrp(){
+  var html = '';
+  ORDER.forEach(function(id){
+    var d = IRP[id];
+    if (!d.avail) {
+      html += '<tr data-broker="' + NAME[id] + '">' +
+        '<td class="l">' + brokerCell(id) + '</td>' +
+        '<td class="l"><span class="chip chip-none">미취급</span></td>' +
+        '<td class="r"><span class="na">–</span></td><td class="r"><span class="na">–</span></td><td class="r"><span class="na">–</span></td>' +
+        '<td class="l"><div class="cond2">퇴직연금사업자로 등록돼 있지 않습니다.<br>금융감독원 통합연금포털 퇴직연금사업자 비교공시(2026년 2분기) 증권사 명단으로 확인했습니다.</div></td>' +
+        '</tr>';
+      return;
+    }
+    var chipCls = d.freeType === 'auto' ? 'chip-auto' : (d.freeType === 'warn' ? 'chip-warn' : (d.freeType === 'check' ? 'chip-check' : 'chip-apply'));
+    d.tiers.forEach(function(t, i){
+      html += '<tr data-broker="' + NAME[id] + '">';
+      if (i === 0) html += '<td class="l" rowspan="' + d.tiers.length + '">' + brokerCell(id) + '</td>';
+      html += '<td class="l"><b>' + t.lab + '</b></td>' +
+        '<td class="r">' + fmtPct(t.op, 2) + '</td>' +
+        '<td class="r">' + (t.as === null ? '<span class="chip chip-warn">확인필요</span>' : fmtPct(t.as, 2)) + '</td>' +
+        '<td class="r"><b class="big ' + ((t.op + (t.as || 0)) === 0 ? 'g' : 'a') + '">' + irpSumLabel(t) + '</b></td>';
+      if (i === 0) html += '<td class="l" rowspan="' + d.tiers.length + '"><span class="chip ' + chipCls + '">' + d.freeLabel + '</span>' +
+        '<div class="cond2">' + d.free + '</div>' +
+        '<div class="cond2" style="margin-top:7px;padding-top:6px;border-top:1px dashed var(--border)"><b>ETF 매매수수료</b> · ' + (d.trade || '공시에서 확인하지 못함') + '</div></td>';
+      html += '</tr>';
+    });
+  });
+  document.getElementById('tb-irp').innerHTML = html;
+}
+
+// ---------- 계산기 ----------
+var calcMode = 'std'; // 'std' = 면제 미적용 표준 요율(영업점 개설·퇴직금 이전분) / 'repr' = 비대면 개설(조건이 쉬우면 0%)
+function renderCalc(){
+  var amt = parseFloat(document.getElementById('amount').value) || 0;
+  document.getElementById('amount-hint').textContent = amt >= 100000000
+    ? (amt / 100000000).toFixed(amt % 100000000 === 0 ? 0 : 1) + '억원'
+    : Math.round(amt / 10000).toLocaleString('ko-KR') + '만원';
+
+  var rows = [];
+  ORDER.forEach(function(id){
+    var d = IRP[id];
+    if (!d.avail) return;
+    var t = pickTier(d.tiers, amt);
+    var stdRate = t.op + (t.as || 0);
+    var free = (calcMode === 'repr') && IRP_EASY[id];
+    var rate = free ? 0 : stdRate;
+    var unknown = !free && t.as === null;
+    rows.push({ id:id, rate:rate, tier:t, unknown:unknown, free:free, d:d });
+  });
+  rows.sort(function(a, b){
+    return a.rate - b.rate || irpStdSum(a.id) - irpStdSum(b.id) || SIZE[a.id].rank - SIZE[b.id].rank;
+  });
+
+  var html = '';
+  rows.forEach(function(r){
+    var yearly = amt * r.rate / 100;
+    var note = r.free
+      ? (IRP_SHORT[r.id] || '')
+      : (r.tier.lab + ' 구간' + (r.unknown ? ' · 자산관리수수료 미확인이라 실제로는 더 높을 수 있습니다' : '')
+         + (calcMode === 'std' && IRP_EASY[r.id] ? ' · <b>조건만 맞추면 0원</b>' : ''));
+    html += '<tr data-broker="' + NAME[r.id] + '">' +
+      '<td class="l"><div class="bname">' + NAME[r.id] + '</div></td>' +
+      '<td class="r"><b>' + fmtPct(r.rate, 2) + (r.unknown ? ' +α' : '') + '</b></td>' +
+      '<td class="r"><b class="big ' + (yearly === 0 ? 'g' : 'a') + '">' + fmtWon(yearly) + '</b></td>' +
+      '<td class="r">' + fmtWon(yearly * 10) + '</td>' +
+      '<td class="l"><span class="mute" style="font-size:11.5px">' + note + '</span></td>' +
+      '</tr>';
+  });
+  document.getElementById('tb-calc').innerHTML = html;
+  applyFilter();
+}
+// 구간 경계 — inc:true = "이하"(경계 포함) / inc:false = "미만"(경계 제외)
+var TIER_BOUNDS = {
+  '전 구간':        { max:Infinity,   inc:true  },
+  '1억원 미만':     { max:100000000,  inc:false },
+  '1억 ~ 3억원':    { max:300000000,  inc:false },
+  '3억원 이상':     { max:Infinity,   inc:true  },
+  '1억원 이하':     { max:100000000,  inc:true  },
+  '1억원 초과':     { max:Infinity,   inc:true  },
+  '1.5억원 이하':   { max:150000000,  inc:true  },
+  '1.5억원 초과':   { max:Infinity,   inc:true  },
+  '1.5억 ~ 10억원': { max:1000000000, inc:true  },
+  '10억원 초과':    { max:Infinity,   inc:true  }
+};
+function pickTier(tiers, amt){
+  if (tiers.length === 1) return tiers[0];
+  for (var i = 0; i < tiers.length; i++){
+    var b = TIER_BOUNDS[tiers[i].lab];
+    if (!b) continue;
+    if (b.inc ? amt <= b.max : amt < b.max) return tiers[i];
+  }
+  return tiers[tiers.length - 1];
+}
+
+// ---------- 세제 · 상품 · 링크 ----------
+function renderTax(){
+  document.getElementById('tb-tax').innerHTML = TAX.map(function(r){
+    return '<tr><td class="l tax-k">' + r.k + '</td>' +
+      '<td class="l">' + r.isa + '</td><td class="l">' + r.pen + '</td><td class="l">' + r.irp + '</td></tr>';
+  }).join('');
+}
+function mark(v){
+  if (v === 'ok') return '<b style="color:#2D7A4F;font-size:16px">○</b>';
+  if (v === 'no') return '<b style="color:#C0392B;font-size:16px">✕</b>';
+  return '<span class="chip chip-warn">확인필요</span>';
+}
+function renderProd(){
+  document.getElementById('tb-prod').innerHTML = PROD.map(function(r){
+    return '<tr><td class="l tax-k">' + r.k + (r.note ? '<div class="sub2">' + r.note + '</div>' : '') + '</td>' +
+      '<td>' + mark(r.isa) + '</td><td>' + mark(r.pen) + '</td><td>' + mark(r.irp) + '</td></tr>';
+  }).join('');
+}
+function renderLinks(){
+  document.getElementById('tb-link').innerHTML = ORDER.map(function(id){
+    var ls = (LINKS[id] || []).map(function(l){
+      return '<a class="lnk" href="' + l.u + '" target="_blank" rel="noopener">' +
+             '<span class="lnk-t">' + l.t + '</span><span class="lnk-u">' + l.u + '</span></a>';
+    }).join('');
+    return '<tr data-broker="' + NAME[id] + '"><td class="l">' + brokerCell(id) + '</td>' +
+           '<td class="l"><div class="lnk-wrap">' + ls + '</div></td></tr>';
+  }).join('');
+}
+
+// ---------- 이벤트 ----------
+function howChip(h){
+  if (h === 'auto')  return '<span class="chip chip-auto">자동</span><div class="sub2">계좌 개설만 하면 적용</div>';
+  if (h === 'apply') return '<span class="chip chip-must">신청 필수</span><div class="sub2">신청 안 하면 표준 요율</div>';
+  if (h === 'cond')  return '<span class="chip chip-check">조건부</span><div class="sub2">추가 조건 충족 필요</div>';
+  return '<span class="chip chip-warn">확인필요</span><div class="sub2">고지문에 판정 문구 없음</div>';
+}
+function acctChip(a){ return '<span class="chip chip-tier">' + a + '</span>'; }
+function renderEvFee(){
+  document.getElementById('tb-evfee').innerHTML = EV_FEE.map(function(e){
+    return '<tr data-broker="' + NAME[e.id] + '">' +
+      '<td class="l"><div class="bname">' + NAME[e.id] + '</div><div class="sub2">' + e.title + '</div></td>' +
+      '<td>' + acctChip(e.acct) + '</td>' +
+      '<td class="l"><div class="split">' + e.benefit + '</div></td>' +
+      '<td>' + howChip(e.how) + '<div class="cond2" style="text-align:left;margin-top:6px">' + e.howNote + '</div></td>' +
+      '<td class="l"><div class="cond2">' + e.target + '</div>' +
+        '<div class="cond2" style="margin-top:6px;padding-top:5px;border-top:1px dashed var(--border)"><b>혜택 기간</b> ' + e.dur + '<br><b>이벤트 기간</b> ' + e.period + '</div></td>' +
+      '</tr>';
+  }).join('');
+}
+function renderEvReward(){
+  document.getElementById('tb-evreward').innerHTML = EV_REWARD.map(function(e){
+    return '<tr data-broker="' + NAME[e.id] + '">' +
+      '<td class="l"><div class="bname">' + NAME[e.id] + '</div></td>' +
+      '<td>' + acctChip(e.acct) + '</td>' +
+      '<td class="l"><div class="split">' + e.reward + '</div></td>' +
+      '<td>' + howChip(e.how) + '</td>' +
+      '<td class="l"><div class="cond2">' + e.cond + '</div>' +
+        '<div class="cond2" style="margin-top:6px;padding-top:5px;border-top:1px dashed var(--border)"><b>기간</b> ' + e.period + '</div></td>' +
+      '</tr>';
+  }).join('');
+}
+function renderAsk(){
+  document.getElementById('tb-ask').innerHTML = ASK.map(function(a){
+    return '<tr data-broker="' + NAME[a.id] + '">' +
+      '<td class="l"><div class="bname">' + NAME[a.id] + '</div><div class="sub2">' + a.tel + '</div></td>' +
+      '<td class="l"><b>' + a.what + '</b></td>' +
+      '<td class="l"><div class="ask-q">' + a.q + '</div></td>' +
+      '</tr>';
+  }).join('');
+  document.getElementById('ask-common').innerHTML = ASK_COMMON;
+}
+
+// ---------- 검색 필터 ----------
+function applyFilter(){
+  var q = (document.getElementById('search').value || '').trim();
+  document.querySelectorAll('tr[data-broker]').forEach(function(tr){
+    tr.classList.toggle('hidden-row', q !== '' && tr.getAttribute('data-broker').indexOf(q) === -1);
+  });
+}
+
+// ---------- 이벤트 ----------
+function bind(){
+  document.querySelectorAll('#t-master th.sortable').forEach(function(th){
+    th.addEventListener('click', function(){
+      var k = th.getAttribute('data-key');
+      if (sortKey === k) sortAsc = !sortAsc; else { sortKey = k; sortAsc = true; }
+      syncSortUI(); renderMaster();
+    });
+  });
+  document.querySelectorAll('#t-master .sort-mini button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var k = b.getAttribute('data-key');
+      if (sortKey === k) sortAsc = !sortAsc; else { sortKey = k; sortAsc = true; }
+      syncSortUI(); renderMaster();
+    });
+  });
+  document.getElementById('search').addEventListener('input', applyFilter);
+  document.getElementById('amount').addEventListener('input', renderCalc);
+  document.querySelectorAll('#free-seg button').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('#free-seg button').forEach(function(x){ x.classList.remove('active'); });
+      b.classList.add('active');
+      calcMode = b.getAttribute('data-f');
+      renderCalc();
+    });
+  });
+}
+function syncSortUI(){
+  var arrow = sortAsc ? '▲' : '▼';
+  document.querySelectorAll('#t-master th.sortable').forEach(function(th){
+    var on = th.getAttribute('data-key') === sortKey;
+    th.classList.toggle('on', on);
+    th.querySelector('.arrow').textContent = on ? arrow : '▲▼';
+  });
+  document.querySelectorAll('#t-master .sort-mini button').forEach(function(b){
+    var on = b.getAttribute('data-key') === sortKey;
+    b.classList.toggle('on', on);
+    b.querySelector('.arrow').textContent = on ? arrow : '▲▼';
+  });
+}
+
+renderMaster();
+renderDetail(ISA, 'tb-isa', 'a');
+renderDetail(PEN, 'tb-pen', 'b');
+renderIrp();
+renderEvFee();
+renderEvReward();
+renderAsk();
+renderTax();
+renderProd();
+renderLinks();
+renderCalc();
+bind();
+syncSortUI();
+</script>
+</body>
+</html>
