@@ -859,6 +859,7 @@
     <div class="notes">
       <div class="note-item"><span class="nm">10년 누적</span><span>적립금이 그대로 유지된다고 가정한 <b>단순 곱셈</b>입니다. 실제로는 적립금이 늘면 수수료도 늘고, 구간이 바뀌면 요율도 달라집니다.</span></div>
       <div class="note-item"><span class="nm">구간 적용 방식</span><span>계산기는 적립금이 속한 구간의 요율을 <b>전체 금액에 적용</b>합니다. 대신증권처럼 <b>구간별로 나눠 적용(체차)</b>하는 곳은 1.5억원을 넘는 적립금에서 실제 수수료와 차이가 날 수 있습니다.</span></div>
+      <div class="note-item"><span class="nm">+α 확인 필요</span><span>자산관리수수료가 공시에서 확인되지 않은 곳(<b>+α</b>)은 실제 요율이 더 높을 수 있어 <b>순위 비교에서 빼고 표 맨 아래</b>에 둡니다.</span></div>
     </div>
   </div>
 
@@ -1158,7 +1159,7 @@ var PEN = {
              ref:'나무 일반계좌 <b>0.01 ~ 0.0141639%</b> 준용 추정',
              cond:'<b>공식 수수료 안내에 계좌 유형 구분이 없어 연금저축 전용 요율을 확인하지 못했습니다.</b><br>투자 가능 상품은 펀드와 국내상장 ETF만(개별 주식 불가)으로 확인됩니다.' },
   meritz:  { state:'ok', acct:'디지털관리', raw:'0.009%', sub:'채권 0.015%',
-             misc:'warn', effLo:0.009, effHi:0.0126396, apply:'auto',
+             misc:'warn', effLo:0.009, effHi:0.0132087, effNote:'포함 여부 미확인 · ETF 기준', apply:'auto',
              cond:'대상 상품이 <b>ETF(파생형 제외)·리츠·공모인프라펀드</b>로 한정돼 있습니다.<br>유관기관제비용 포함 여부는 확인하지 못했습니다.' },
   samsung: { state:'ok', acct:'비대면·영업점 공통', raw:'0.0042087%', sub:'ETF 기준 · 리츠 0.0036396%',
              misc:'inc', effLo:0.0042087, effHi:0.0042087, apply:'auto',
@@ -1182,8 +1183,8 @@ var PEN = {
   eugene:  { state:'ok', acct:'비대면 계좌', raw:'0.015%', sub:'HTS·MTS 동일 · NXT 0.014%',
              misc:'inc', effLo:0.015, effHi:0.015, apply:'auto',
              cond:'<b>"매체별 수수료율 적용 · 종합계좌 수수료율과 동일"</b>이라고 공식 명시돼 있어, 비대면 개설 시 비대면 종합계좌 요율(0.015%, 유관기관제비용 포함)이 적용됩니다. 영업점 개설 계좌는 구간별 0.08 ~ 0.18%입니다.<br>대상 상품에서 <b>파생상품 ETF(레버리지·인버스) 제외</b>도 명시돼 있습니다.<br><b>2026.10.1 ~ 12.31에 디지털 연금저축을 최초 신규 개설하면 국내주식(ETF 포함) 거래수수료가 1년간 0.0049%</b>(KRX·NXT 포함, 제세금 별도, 자동 적용)입니다. 제휴사·퀀텍 앱·영업점 관리 계좌는 제외됩니다.' },
-  toss:    { state:'ok', acct:'모바일 전용', raw:'0.015%', sub:'NXT 0.014%',
-             misc:'sep', effLo:0.0186396, effHi:0.0186396, apply:'auto',
+  toss:    { state:'ok', acct:'모바일 전용', raw:'0.015%', sub:'NXT 0.014% · 유관 별도(ETF 0.0042087%)',
+             misc:'sep', effLo:0.0192087, effHi:0.0192087, apply:'auto',
              cond:'<b>2026년 7월 출시.</b> 계좌관리수수료는 없고 국내주식 거래수수료가 그대로 붙습니다.<br>국내상장 ETF만 가능(인버스·레버리지 제외)하며, <b>금융기관 간 계좌이체·ISA 만기전환금 입금은 아직 제공되지 않습니다.</b>' },
   kakaopay:{ state:'ok', acct:'모바일 전용', raw:'0.015%', sub:'NXT 0.014%',
              misc:'inc', effLo:0.015, effHi:0.015, apply:'auto',
@@ -1551,6 +1552,10 @@ function irpStdSum(id){
   var t = d.tiers[0];
   return Math.round(((t.op || 0) + (t.as || 0)) * 10000) / 10000;
 }
+function irpStdUnknown(id){
+  var d = IRP[id];
+  return !!(d && d.avail && d.tiers[0].as === null);
+}
 function irpSumLabel(t){
   if (t.as === null) return fmtPct(t.op, 2) + ' + 확인필요';
   return fmtPct((t.op || 0) + (t.as || 0), 2);
@@ -1580,6 +1585,9 @@ function renderMaster(){
     if (va === vb) {
       // 대표값이 같으면(대부분 0%) 조건 미충족 시의 표준 요율로 갈라준다
       if (sortKey === 'irp') {
+        // 자산관리수수료 미확인(+α)은 표준 요율 비교에서 맨 뒤로
+        var ua = irpStdUnknown(a), ub = irpStdUnknown(b);
+        if (ua !== ub) return ua ? 1 : -1;
         var sa = irpStdSum(a), sb = irpStdSum(b);
         if (sa !== sb) return sortAsc ? sa - sb : sb - sa;
       }
@@ -1708,8 +1716,9 @@ function renderCalc(){
     var unknown = !free && t.as === null;
     rows.push({ id:id, rate:rate, tier:t, unknown:unknown, free:free, d:d });
   });
+  // 자산관리수수료 미확인(+α)인 곳은 실제 요율이 더 높을 수 있어 순위 비교에서 빼고 맨 뒤에 둔다
   rows.sort(function(a, b){
-    return a.rate - b.rate || irpStdSum(a.id) - irpStdSum(b.id) || SIZE[a.id].rank - SIZE[b.id].rank;
+    return (a.unknown - b.unknown) || a.rate - b.rate || irpStdSum(a.id) - irpStdSum(b.id) || SIZE[a.id].rank - SIZE[b.id].rank;
   });
 
   var html = '';
@@ -1721,7 +1730,7 @@ function renderCalc(){
          + (calcMode === 'std' && IRP_EASY[r.id] ? ' · <b>조건만 맞추면 0원</b>' : ''));
     html += '<tr data-broker="' + NAME[r.id] + '">' +
       '<td class="l"><div class="bname">' + NAME[r.id] + '</div></td>' +
-      '<td class="r"><b>' + fmtPct(r.rate, 2) + (r.unknown ? ' +α' : '') + '</b></td>' +
+      '<td class="r"><b>' + fmtPct(r.rate, 2) + (r.unknown ? ' +α' : '') + '</b>' + (r.unknown ? '<div class="sub2"><span class="chip chip-warn">확인 필요</span></div>' : '') + '</td>' +
       '<td class="r"><b class="big ' + (yearly === 0 ? 'g' : 'a') + '">' + fmtWon(yearly) + '</b></td>' +
       '<td class="r">' + fmtWon(yearly * 10) + '</td>' +
       '<td class="l"><span class="mute" style="font-size:11.5px">' + note + '</span></td>' +
