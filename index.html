@@ -420,6 +420,14 @@
 @media (max-width: 768px) {
   input[type=text], input[type=number], input[type=search], input[type=tel], input:not([type]), select, textarea { font-size: 16px !important; }
 }
+  .scroll-hint { display: none; margin: 12px 0 -8px; text-align: center; font-size: 12px; font-weight: 700; color: var(--ink-mute); }
+  @media (max-width: 410px) { .scroll-hint.sh-410 { display: block; } }
+  @media (max-width: 430px) { .scroll-hint.sh-430 { display: block; } }
+  @media (max-width: 450px) { .scroll-hint.sh-450 { display: block; } }
+  @media (max-width: 550px) { .scroll-hint.sh-550 { display: block; } }
+  @media (max-width: 560px) { .scroll-hint.sh-560 { display: block; } }
+  @media (max-width: 570px) { .scroll-hint.sh-570 { display: block; } }
+  @media (max-width: 600px) { .scroll-hint.sh-600 { display: block; } }
 </style>
 <body>
 <style>
@@ -603,6 +611,7 @@
       </div>
       <div class="sort-hint">↕ 회색 표 머리글을 누르면 오름차순 ↔ 내림차순으로 정렬됩니다</div>
     </div>
+    <p class="scroll-hint sh-550" aria-hidden="true">← 옆으로 밀어 보세요 →</p>
     <div class="table-wrap">
       <table class="t master">
         <thead>
@@ -657,6 +666,7 @@
         반대로 <strong>전용 우대가 아예 없다고 명시</strong>한 곳도 있습니다.
       </div>
     </div>
+    <p class="scroll-hint sh-600" aria-hidden="true">← 옆으로 밀어 보세요 →</p>
     <div class="table-wrap">
       <table class="t">
         <thead>
@@ -690,6 +700,7 @@
         확인하지 못한 곳은 일반계좌 요율을 <strong>참고값</strong>으로만 병기하고 순위에서는 뺐습니다.
       </div>
     </div>
+    <p class="scroll-hint sh-560" aria-hidden="true">← 옆으로 밀어 보세요 →</p>
     <div class="table-wrap">
       <table class="t">
         <thead>
@@ -724,6 +735,7 @@
         적립금 구간이 나뉘는 곳은 구간을 전부 적었습니다.
       </div>
     </div>
+    <p class="scroll-hint sh-450" aria-hidden="true">← 옆으로 밀어 보세요 →</p>
     <div class="table-wrap">
       <table class="t">
         <thead>
@@ -764,6 +776,7 @@
         고지문에 "자동 적용"이나 "신청 필수" 문구가 실제로 있는 것만 판정했습니다.
       </div>
     </div>
+    <p class="scroll-hint sh-430" aria-hidden="true">← 옆으로 밀어 보세요 →</p>
     <div class="table-wrap">
       <table class="t">
         <thead>
@@ -796,6 +809,7 @@
         "최대 ○○만원"은 대부분 <strong>수억 원을 넣었을 때의 상한값</strong>입니다.
       </div>
     </div>
+    <p class="scroll-hint sh-570" aria-hidden="true">← 옆으로 밀어 보세요 →</p>
     <div class="table-wrap">
       <table class="t">
         <thead>
@@ -849,6 +863,7 @@
         </div>
       </div>
     </div>
+    <p class="scroll-hint sh-410" aria-hidden="true">← 옆으로 밀어 보세요 →</p>
     <div class="table-wrap">
       <table class="t">
         <thead>
