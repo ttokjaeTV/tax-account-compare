@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-22 12:13 KST",
+  "checked_at": "2026-11-23 12:44 KST",
   "targets": {
     "mirae_irp": {
       "rates": [
@@ -22,7 +22,7 @@
         0.28,
         0.3
       ],
-      "checked_at": "2026-11-22 12:13 KST"
+      "checked_at": "2026-11-23 12:44 KST"
     },
     "hana_irp": {
       "rates": [
@@ -43,7 +43,7 @@
         0.275,
         0.3
       ],
-      "checked_at": "2026-11-22 12:13 KST"
+      "checked_at": "2026-11-23 12:44 KST"
     },
     "namuh_fee": {
       "rates": [
@@ -93,7 +93,7 @@
         0.51,
         0.6
       ],
-      "checked_at": "2026-11-22 12:13 KST"
+      "checked_at": "2026-11-23 12:44 KST"
     },
     "samsung_fee": {
       "rates": [
@@ -117,7 +117,7 @@
         0.447216,
         0.497216
       ],
-      "checked_at": "2026-11-22 12:13 KST"
+      "checked_at": "2026-11-23 12:44 KST"
     },
     "shinhan_fee": {
       "rates": [
@@ -208,7 +208,7 @@
         0.534,
         0.7
       ],
-      "checked_at": "2026-11-22 12:13 KST"
+      "checked_at": "2026-11-23 12:44 KST"
     },
     "daishin_fee": {
       "rates": [
@@ -259,7 +259,7 @@
         0.498132,
         0.7
       ],
-      "checked_at": "2026-11-22 12:13 KST"
+      "checked_at": "2026-11-23 12:44 KST"
     },
     "kakaopay_fee": {
       "rates": [
@@ -272,7 +272,7 @@
         0.2,
         0.49
       ],
-      "checked_at": "2026-11-22 12:13 KST"
+      "checked_at": "2026-11-23 12:44 KST"
     },
     "kis_fee": {
       "rates": [
@@ -345,7 +345,7 @@
         0.5,
         0.6
       ],
-      "checked_at": "2026-11-22 12:13 KST"
+      "checked_at": "2026-11-23 12:44 KST"
     }
   }
 }
